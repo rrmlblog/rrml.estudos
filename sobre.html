@@ -46,11 +46,14 @@
     display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap;margin-bottom:8px;
   }
   .profile img{
-    width:220px;height:330px;object-fit:cover;border-radius:16px;
+    width:180px;height:180px;object-fit:cover;border-radius:16px;
     border:1px solid var(--card-border);flex-shrink:0;
   }
   .profile-text{flex:1;min-width:260px;}
-  h1{font-family:Georgia,'Times New Roman',serif;color:var(--navy);font-size:30px;margin:0 0 6px;}
+  h1{font-family:Georgia,'Times New Roman',serif;color:var(--navy);font-size:23px;margin:0 0 6px;}
+  @media (min-width: 561px){
+    h1{white-space:nowrap;}
+  }
   .role-pill{
     display:inline-block;background:var(--pill-bg);color:var(--pill-text);
     font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;margin:0 8px 8px 0;
