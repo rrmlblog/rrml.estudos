@@ -56,6 +56,15 @@
     border-top:1px solid var(--card-border);padding-top:24px;
   }
   footer .handle{font-size:15px;display:block;margin-top:4px;}
+  .filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 40px;}
+  .filter-btn{
+    font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;
+    padding:7px 14px;border-radius:999px;border:1px solid var(--card-border);
+    background:#ffffff;color:var(--muted);cursor:pointer;
+  }
+  .filter-btn:hover{border-color:var(--teal);}
+  .filter-btn.active{background:var(--navy);border-color:var(--navy);color:#ffffff;}
+  .region.is-hidden, .card.is-hidden{display:none;}
 </style>
 </head>
 <body>
@@ -68,38 +77,44 @@
   <h1>O que aconteceu cada semana</h1>
   <p class="lede">Arquivo de todas as atualizações semanais de psicologia, neuropsicologia e saúde mental — Brasil e mundo.</p>
 
+  <div class="filters" id="filters">
+    <button class="filter-btn active" data-filter="todos">Todos</button>
+    <button class="filter-btn" data-filter="neuro">Neurociência</button>
+    <button class="filter-btn" data-filter="saude">Saúde mental</button>
+  </div>
+
   <!-- WEEKLY_POSTS_START -->
   <section class="week" id="week-2026-07-06">
     <div class="week-date">29 jun – 05 jul 2026</div>
 
-    <div class="region">🇧🇷 Brasil</div>
-    <div class="card">
+    <div class="region" data-region="brasil">🇧🇷 Brasil</div>
+    <div class="card" data-cat="saude" data-region="brasil">
       <span class="badge saude">Saúde mental · Brasil</span>
       <h3>Afastamentos por saúde mental seguem em alta no país</h3>
       <p>Dados da Previdência Social mostram forte aumento nas licenças por transtornos mentais e comportamentais, com ansiedade e depressão liderando os casos e mulheres representando mais de 63% dos afastamentos.</p>
       <a href="https://brasil.un.org/pt-br/292926-brasil-afastamentos-por-problemas-de-sa%C3%BAde-mental-aumentam-134" target="_blank" rel="noopener">Fonte: ONU Brasil →</a>
     </div>
-    <div class="card">
+    <div class="card" data-cat="saude" data-region="brasil">
       <span class="badge saude">Saúde mental · Brasil</span>
       <h3>Ministério da Saúde avança na primeira Pesquisa Nacional de Saúde Mental</h3>
       <p>O levantamento de base populacional (PNSM-Brasil) vai mapear a prevalência de depressão, ansiedade, uso de álcool/drogas e comportamento suicida entre adultos em todo o território nacional.</p>
       <a href="https://www.gov.br/saude/pt-br/assuntos/noticias/2026/marco/ministerio-da-saude-inicia-coleta-de-dados-da-primeira-pesquisa-nacional-de-saude-mental-do-brasil" target="_blank" rel="noopener">Fonte: gov.br →</a>
     </div>
 
-    <div class="region">🌍 Mundo</div>
-    <div class="card">
+    <div class="region" data-region="mundo">🌍 Mundo</div>
+    <div class="card" data-cat="neuro" data-region="mundo">
       <span class="badge neuro">Neurociência</span>
       <h3>Cientistas identificam novo mecanismo de morte neuronal no Alzheimer</h3>
       <p>Pesquisadores do King's College London descrevem a "carioptose", processo que liga o acúmulo de proteínas tóxicas à destruição do núcleo celular, presente em 35% das células do córtex frontal de pacientes com Alzheimer (vs. 15% em controles saudáveis).</p>
       <a href="https://www.sciencedaily.com/releases/2026/06/260626124701.htm" target="_blank" rel="noopener">Fonte: ScienceDaily →</a>
     </div>
-    <div class="card">
+    <div class="card" data-cat="neuro" data-region="mundo">
       <span class="badge neuro">Neurociência</span>
       <h3>Beber para lidar com o estresse na juventude pode alterar o cérebro permanentemente</h3>
       <p>Estudo da Universidade de Massachusetts Amherst aponta que usar álcool como estratégia de enfrentamento no início da vida adulta reduz a flexibilidade mental décadas depois e aumenta o risco de recaída e declínio cognitivo.</p>
       <a href="https://www.sciencedaily.com/releases/2026/06/260626030437.htm" target="_blank" rel="noopener">Fonte: ScienceDaily →</a>
     </div>
-    <div class="card">
+    <div class="card" data-cat="neuro" data-region="mundo">
       <span class="badge neuro">Neurociência</span>
       <h3>Saúde cerebral pode melhorar em qualquer idade, mesmo aos 90 anos</h3>
       <p>Estudo de três anos com quase 4 mil adultos (19 a 94 anos) mostra que treino cognitivo breve diário e hábitos saudáveis geram ganhos duradouros, inclusive em quem parte de níveis mais baixos — contrariando a ideia de declínio inevitável.</p>
@@ -113,5 +128,33 @@
     <span class="handle">@rrml.estudos</span>
   </footer>
 </div>
+<script>
+  var buttons = document.querySelectorAll('.filter-btn');
+  var cards = document.querySelectorAll('.card');
+  var regions = document.querySelectorAll('.region');
+
+  buttons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      buttons.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var filter = btn.getAttribute('data-filter');
+
+      cards.forEach(function (card) {
+        var show = filter === 'todos' || card.getAttribute('data-cat') === filter;
+        card.classList.toggle('is-hidden', !show);
+      });
+
+      regions.forEach(function (region) {
+        var section = region.closest('.week');
+        var regionName = region.getAttribute('data-region');
+        var anyVisible = Array.prototype.some.call(
+          section.querySelectorAll('.card[data-region="' + regionName + '"]'),
+          function (card) { return !card.classList.contains('is-hidden'); }
+        );
+        region.classList.toggle('is-hidden', !anyVisible);
+      });
+    });
+  });
+</script>
 </body>
 </html>
