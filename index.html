@@ -80,6 +80,15 @@
     border-top:1px solid var(--card-border);padding-top:24px;
   }
   footer .handle{font-size:15px;display:block;margin-top:4px;}
+  .week-tabs{display:flex;gap:20px;margin:0 0 24px;border-bottom:1px solid var(--card-border);overflow-x:auto;}
+  .week-tab-btn{
+    font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;
+    background:none;border:none;border-bottom:2px solid transparent;
+    color:var(--muted);cursor:pointer;padding:0 2px 12px;white-space:nowrap;
+  }
+  .week-tab-btn:hover{color:var(--navy);}
+  .week-tab-btn.active{color:var(--navy);border-bottom-color:var(--teal);}
+  .week-hidden{display:none;}
   .filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 40px;}
   .filter-btn{
     font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;
@@ -109,6 +118,8 @@
   <div class="accent"></div>
   <h1>O que aconteceu cada semana</h1>
   <p class="lede">Arquivo de todas as atualizações semanais de psicologia, neuropsicologia e saúde mental — Brasil e mundo.</p>
+
+  <div class="week-tabs" id="weekTabs"></div>
 
   <div class="filters" id="filters">
     <button class="filter-btn active" data-filter="todos">Todos</button>
@@ -200,6 +211,37 @@
   </footer>
 </div>
 <script>
+  var weekSections = document.querySelectorAll('.week');
+  var weekTabsContainer = document.getElementById('weekTabs');
+
+  var allWeeksBtn = document.createElement('button');
+  allWeeksBtn.className = 'week-tab-btn active';
+  allWeeksBtn.textContent = 'Todas';
+  allWeeksBtn.setAttribute('data-week', 'todas');
+  weekTabsContainer.appendChild(allWeeksBtn);
+
+  weekSections.forEach(function (section) {
+    var dateLabel = section.querySelector('.week-date').textContent;
+    var btn = document.createElement('button');
+    btn.className = 'week-tab-btn';
+    btn.textContent = dateLabel;
+    btn.setAttribute('data-week', section.id);
+    weekTabsContainer.appendChild(btn);
+  });
+
+  var weekTabButtons = weekTabsContainer.querySelectorAll('.week-tab-btn');
+  weekTabButtons.forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      weekTabButtons.forEach(function (b) { b.classList.remove('active'); });
+      btn.classList.add('active');
+      var target = btn.getAttribute('data-week');
+      weekSections.forEach(function (section) {
+        var show = target === 'todas' || section.id === target;
+        section.classList.toggle('week-hidden', !show);
+      });
+    });
+  });
+
   var buttons = document.querySelectorAll('.filter-btn');
   var cards = document.querySelectorAll('.card');
   var regions = document.querySelectorAll('.region');
