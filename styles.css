@@ -301,6 +301,7 @@ a{ color:inherit; }
 }
 .profile img{
   width:100%; aspect-ratio:3/4; object-fit:cover;
+  object-position:68% center;
   border-radius:2px;
 }
 .role-list{ margin:0 0 24px; }
