@@ -25,7 +25,7 @@
   <div class="wrap">
     <a class="nav-mark" href="index.html">rrml.estudos</a>
     <ul class="nav-links">
-      <li><a href="index.html#journal">Journal</a></li>
+      <li><a href="index.html#resumo-semanal">Resumo semanal</a></li>
       <li><a href="quiz.html">Quiz</a></li>
       <li><a href="sobre.html">Sobre</a></li>
       <li><a class="ig" href="https://www.instagram.com/rrml.estudos/" target="_blank" rel="noopener">Instagram</a></li>
@@ -37,7 +37,7 @@
   <div class="wrap">
     <p class="kicker">Quiz da semana</p>
     <h1 style="font-size:clamp(2.2rem, 4.6vw, 3.6rem); max-width:20ch;">Você acompanhou as <em>novidades</em> desta semana?</h1>
-    <p class="hero-sub">Cinco perguntas rápidas sobre o Journal de 06 – 12 de julho. Uma pergunta por vez, sem pressa.</p>
+    <p class="hero-sub">Cinco perguntas rápidas sobre o resumo semanal de 06 – 12 de julho. Uma pergunta por vez, sem pressa.</p>
   </div>
 </header>
 
@@ -73,7 +73,7 @@
       </div>
 
       <div class="quiz-actions">
-        <a class="is-primary" href="index.html#journal">Continuar aprendendo</a>
+        <a class="is-primary" href="index.html#resumo-semanal">Continuar aprendendo</a>
         <button id="quizRetryBtn">Refazer quiz</button>
       </div>
     </div>
@@ -88,7 +88,7 @@
       <div class="footer-line">Conteúdo baseado em evidências, toda semana.</div>
     </div>
     <ul class="footer-nav">
-      <li><a href="index.html#journal">Journal</a></li>
+      <li><a href="index.html#resumo-semanal">Resumo semanal</a></li>
       <li><a href="https://www.instagram.com/rrml.estudos/" target="_blank" rel="noopener">Instagram</a></li>
     </ul>
   </div>
@@ -236,9 +236,9 @@
     if (score === quizData.length) {
       reaction = 'Você não perdeu nada essa semana — leu tudo com atenção.';
     } else if (score >= quizData.length - 2) {
-      reaction = 'Muito bem — só faltou um detalhe ou outro. Vale revisitar o Journal.';
+      reaction = 'Muito bem — só faltou um detalhe ou outro. Vale revisitar o resumo semanal.';
     } else {
-      reaction = 'A semana teve bastante coisa boa. Vale revisitar o Journal completo.';
+      reaction = 'A semana teve bastante coisa boa. Vale revisitar o resumo semanal completo.';
     }
     els.reaction.textContent = reaction;
 
