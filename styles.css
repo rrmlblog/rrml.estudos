@@ -308,6 +308,116 @@ a{ color:inherit; }
   margin:0 0 20px; max-width:var(--measure-narrow); font-weight:300;
 }
 
+/* ---------- Quiz ---------- */
+
+.quiz-shell{ max-width:38rem; margin:0 auto; padding:8px 0 120px; }
+
+.quiz-progress{
+  height:2px; background:var(--line); border-radius:2px; overflow:hidden;
+  margin-bottom:16px;
+}
+.quiz-progress-fill{
+  height:100%; background:var(--accent-ink, var(--ink)); background:var(--accent);
+  transition:width .5s ease;
+}
+.quiz-meta{
+  display:flex; justify-content:space-between; align-items:baseline;
+  font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
+  color:var(--ink-faint); margin-bottom:40px;
+}
+
+.quiz-question{
+  font-family:var(--font-display); font-weight:480;
+  font-size:clamp(1.5rem, 3.4vw, 2.1rem);
+  line-height:1.32; margin:0 0 36px;
+}
+
+.quiz-options{ display:flex; flex-direction:column; gap:12px; margin-bottom:0; }
+.quiz-option{
+  display:flex; align-items:center; justify-content:space-between; gap:16px;
+  text-align:left; width:100%;
+  font-family:var(--font-body); font-size:15.5px; color:var(--ink);
+  background:var(--paper); border:1px solid var(--line); border-radius:2px;
+  padding:16px 20px; cursor:pointer;
+  transition:border-color .25s ease, opacity .25s ease;
+}
+.quiz-option:hover:not(:disabled){ border-color:var(--ink-faint); }
+.quiz-option:disabled{ cursor:default; }
+.quiz-option .qi-icon{
+  font-size:16px; opacity:0; transition:opacity .2s ease;
+}
+.quiz-option.is-correct{
+  border-color:var(--ink); border-width:1.5px;
+}
+.quiz-option.is-correct .qi-icon{ opacity:1; }
+.quiz-option.is-wrong{
+  color:var(--ink-faint); border-color:var(--line);
+}
+.quiz-option.is-wrong .qi-icon{ opacity:1; }
+.quiz-option.is-muted{ opacity:0.45; }
+
+.quiz-explanation{
+  margin-top:28px; padding-top:24px; border-top:1px solid var(--line);
+}
+.quiz-explanation p{
+  font-size:15px; color:var(--ink-soft); line-height:1.75; font-weight:300;
+  margin:0 0 10px; max-width:56ch;
+}
+.quiz-explanation a{
+  font-size:12px; text-decoration:none; color:var(--ink);
+  border-bottom:1px solid var(--accent); padding-bottom:2px;
+}
+
+.quiz-next{
+  margin-top:28px;
+  font-family:var(--font-body); font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
+  background:var(--ink); color:var(--paper); border:none; border-radius:2px;
+  padding:14px 26px; cursor:pointer;
+}
+.quiz-next:hover{ opacity:0.88; }
+
+.quiz-results{ padding:8px 0; }
+.quiz-score-label{
+  font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--ink-soft); margin:0 0 12px;
+}
+.quiz-score{
+  font-family:var(--font-display); font-weight:340; font-style:italic;
+  font-size:clamp(3rem, 9vw, 5rem); line-height:1; margin:0 0 20px;
+}
+.quiz-score span{ font-size:0.4em; font-style:normal; color:var(--ink-soft); }
+.quiz-reaction{
+  font-size:16px; color:var(--ink-soft); font-weight:300; line-height:1.7;
+  max-width:44ch; margin:0 0 48px;
+}
+.quiz-reading{ border-top:1px solid var(--line); padding-top:28px; margin-bottom:40px; }
+.quiz-reading h3{
+  font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--ink-soft); font-weight:400; margin:0 0 18px;
+}
+.quiz-reading ol{ list-style:none; margin:0; padding:0; }
+.quiz-reading li{
+  border-top:1px solid var(--line); padding:14px 0;
+}
+.quiz-reading li:first-child{ border-top:none; }
+.quiz-reading a{
+  text-decoration:none; color:var(--ink); font-size:14.5px;
+  display:flex; justify-content:space-between; gap:12px; align-items:baseline;
+}
+.quiz-reading a:hover{ color:var(--ink-soft); }
+.quiz-reading a .qr-source{ font-size:11px; color:var(--ink-faint); white-space:nowrap; }
+
+.quiz-actions{ display:flex; gap:16px; flex-wrap:wrap; }
+.quiz-actions button, .quiz-actions a{
+  font-family:var(--font-body); font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
+  border-radius:2px; padding:14px 26px; cursor:pointer; text-decoration:none;
+  border:1px solid var(--ink); color:var(--ink); background:transparent;
+}
+.quiz-actions .is-primary{ background:var(--ink); color:var(--paper); }
+.quiz-actions a:hover, .quiz-actions button:hover{ opacity:0.75; }
+
+.quiz-hidden{ display:none; }
+
 /* ---------- Footer ---------- */
 
 .site-footer{

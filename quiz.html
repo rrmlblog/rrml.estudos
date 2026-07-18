@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quiz da semana — rrml.estudos</title>
+<meta name="description" content="Cinco perguntas rápidas sobre as novidades da semana em psicologia, neuropsicologia e saúde mental.">
+<link rel="icon" type="image/png" href="favicon.png?v=3">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rrmlblog.github.io/rrml.estudos/quiz.html">
+<meta property="og:title" content="Quiz da semana — rrml.estudos">
+<meta property="og:description" content="Cinco perguntas rápidas sobre as novidades da semana em psicologia, neuropsicologia e saúde mental.">
+<meta property="og:image" content="https://rrmlblog.github.io/rrml.estudos/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Quiz da semana — rrml.estudos">
+<meta name="twitter:description" content="Cinco perguntas rápidas sobre as novidades da semana em psicologia, neuropsicologia e saúde mental.">
+<meta name="twitter:image" content="https://rrmlblog.github.io/rrml.estudos/og-image.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body data-accent="sunflower">
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="nav-mark" href="index.html">rrml.estudos</a>
+    <ul class="nav-links">
+      <li><a href="index.html#journal">Journal</a></li>
+      <li><a href="quiz.html">Quiz</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a class="ig" href="https://www.instagram.com/rrml.estudos/" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:48px;">
+  <div class="wrap">
+    <p class="kicker">Quiz da semana</p>
+    <h1 style="font-size:clamp(2.2rem, 4.6vw, 3.6rem); max-width:20ch;">Você acompanhou as <em>novidades</em> desta semana?</h1>
+    <p class="hero-sub">Cinco perguntas rápidas sobre o Journal de 06 – 12 de julho. Uma pergunta por vez, sem pressa.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="quiz-shell">
+
+    <div id="quizPlay">
+      <div class="quiz-progress"><div class="quiz-progress-fill" id="quizProgressFill" style="width:0%"></div></div>
+      <div class="quiz-meta">
+        <span id="quizCounter">Pergunta 1 de 5</span>
+        <span id="quizScoreLive">0 acertos</span>
+      </div>
+
+      <h2 class="quiz-question" id="quizQuestion"></h2>
+      <div class="quiz-options" id="quizOptions"></div>
+
+      <div class="quiz-explanation quiz-hidden" id="quizExplanation">
+        <p id="quizExplanationText"></p>
+        <a id="quizExplanationLink" href="#" target="_blank" rel="noopener"></a>
+      </div>
+
+      <button class="quiz-next quiz-hidden" id="quizNextBtn">Próxima pergunta</button>
+    </div>
+
+    <div class="quiz-results quiz-hidden" id="quizResults">
+      <p class="quiz-score-label">Knowledge score</p>
+      <p class="quiz-score"><span id="quizFinalScore">0</span><span> de 5</span></p>
+      <p class="quiz-reaction" id="quizReaction"></p>
+
+      <div class="quiz-reading">
+        <h3>Leitura sugerida</h3>
+        <ol id="quizReadingList"></ol>
+      </div>
+
+      <div class="quiz-actions">
+        <a class="is-primary" href="index.html#journal">Continuar aprendendo</a>
+        <button id="quizRetryBtn">Refazer quiz</button>
+      </div>
+    </div>
+
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-mark">rrml.estudos</div>
+      <div class="footer-line">Conteúdo baseado em evidências, toda semana.</div>
+    </div>
+    <ul class="footer-nav">
+      <li><a href="index.html#journal">Journal</a></li>
+      <li><a href="https://www.instagram.com/rrml.estudos/" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+  </div>
+</footer>
+
+<script>
+  var quizData = [
+    {
+      question: "Quantos domicílios o IBGE pretende visitar na Pesquisa Nacional de Saúde 2026?",
+      options: ["14 mil", "40 mil", "140 mil", "1,4 milhão"],
+      correct: 2,
+      explanation: "Cerca de 1,8 mil entrevistadores vão visitar 140 mil domicílios até novembro, incluindo pela primeira vez coleta de biomarcadores por exames de sangue e urina.",
+      source: { label: "Fonte: Agência Brasil", url: "https://agenciabrasil.ebc.com.br/saude/noticia/2026-07/ibge-inicia-coleta-da-pesquisa-nacional-de-saude-2026" }
+    },
+    {
+      question: "Quantas universidades públicas participam da pesquisa Enasam-U sobre saúde mental no ensino superior?",
+      options: ["12", "15", "50", "100"],
+      correct: 2,
+      explanation: "O estudo, coordenado por UFRGS e Fiocruz com apoio do CNPq, vai avaliar estudantes e servidores de 50 universidades públicas para orientar políticas de saúde mental no ensino superior.",
+      source: { label: "Fonte: UFPB", url: "https://www.ufpb.br/noticias/ufpb-participa-de-pesquisa-inedita-que-mapeia-os-desafios-de-saude-mental-em-universidades-brasileiras/" }
+    },
+    {
+      question: "Segundo pesquisadores da Amsterdam UMC, o que a segunda gravidez faz com o cérebro?",
+      options: [
+        "Não causa nenhuma mudança adicional",
+        "Repete exatamente as mesmas mudanças da primeira gravidez",
+        "Reduz o volume cerebral de forma permanente",
+        "Altera redes cerebrais diferentes das ativadas na primeira gestação"
+      ],
+      correct: 3,
+      explanation: "Comparando ressonâncias antes e depois de cada gestação, os pesquisadores viram que a segunda gravidez altera redes cerebrais diferentes — achado que pode ajudar a entender e prevenir a depressão pós-parto.",
+      source: { label: "Fonte: Nature Communications", url: "https://www.nature.com/articles/s41467-026-69370-8" }
+    },
+    {
+      question: "O que acontece com a atividade do córtex pré-frontal ao aprender uma nova regra?",
+      options: [
+        "Fica mais dispersa e complexa",
+        "Passa a representações mais compactas e abstratas",
+        "Desliga completamente durante o aprendizado",
+        "Não se altera em nenhum momento"
+      ],
+      correct: 1,
+      explanation: "A atividade passa de dispersa e complexa para representações mais compactas e abstratas — o mecanismo que permite generalizar aprendizados para novas situações.",
+      source: { label: "Fonte: Nature Neuroscience", url: "https://www.nature.com/articles/s41593-026-02333-w" }
+    },
+    {
+      question: "A pesquisa publicada no American Journal of Psychiatry relacionou transtornos mentais graves com qual fator?",
+      options: ["Padrões de sono", "Nível de escolaridade", "Marcadores metabólicos do sangue", "Uso de redes sociais"],
+      correct: 2,
+      explanation: "O estudo mapeou a relação genética entre transtorno bipolar, depressão maior e esquizofrenia com marcadores metabólicos do sangue, ajudando a explicar a pior saúde cardiometabólica associada a essas condições.",
+      source: { label: "Fonte: American Journal of Psychiatry", url: "https://doi.org/10.1176/appi.ajp.20250259" }
+    }
+  ];
+
+  var current = 0;
+  var score = 0;
+  var answered = false;
+
+  var els = {
+    progressFill: document.getElementById('quizProgressFill'),
+    counter: document.getElementById('quizCounter'),
+    scoreLive: document.getElementById('quizScoreLive'),
+    question: document.getElementById('quizQuestion'),
+    options: document.getElementById('quizOptions'),
+    explanation: document.getElementById('quizExplanation'),
+    explanationText: document.getElementById('quizExplanationText'),
+    explanationLink: document.getElementById('quizExplanationLink'),
+    nextBtn: document.getElementById('quizNextBtn'),
+    play: document.getElementById('quizPlay'),
+    results: document.getElementById('quizResults'),
+    finalScore: document.getElementById('quizFinalScore'),
+    reaction: document.getElementById('quizReaction'),
+    readingList: document.getElementById('quizReadingList'),
+    retryBtn: document.getElementById('quizRetryBtn')
+  };
+
+  function renderQuestion(){
+    answered = false;
+    var item = quizData[current];
+    els.progressFill.style.width = ((current) / quizData.length * 100) + '%';
+    els.counter.textContent = 'Pergunta ' + (current + 1) + ' de ' + quizData.length;
+    els.scoreLive.textContent = score + ' acerto' + (score === 1 ? '' : 's');
+    els.question.textContent = item.question;
+    els.options.innerHTML = '';
+    els.explanation.classList.add('quiz-hidden');
+    els.nextBtn.classList.add('quiz-hidden');
+
+    item.options.forEach(function (optionText, i) {
+      var btn = document.createElement('button');
+      btn.className = 'quiz-option';
+      btn.innerHTML = '<span>' + optionText + '</span><i class="ti qi-icon" aria-hidden="true"></i>';
+      btn.addEventListener('click', function () { selectAnswer(i, btn); });
+      els.options.appendChild(btn);
+    });
+  }
+
+  function selectAnswer(i, btn){
+    if (answered) return;
+    answered = true;
+    var item = quizData[current];
+    var allButtons = els.options.querySelectorAll('.quiz-option');
+
+    allButtons.forEach(function (b, idx) {
+      b.disabled = true;
+      var icon = b.querySelector('.qi-icon');
+      if (idx === item.correct) {
+        b.classList.add('is-correct');
+        icon.className = 'ti ti-check qi-icon';
+      } else if (idx === i) {
+        b.classList.add('is-wrong');
+        icon.className = 'ti ti-x qi-icon';
+      } else {
+        b.classList.add('is-muted');
+      }
+    });
+
+    if (i === item.correct) score++;
+    els.scoreLive.textContent = score + ' acerto' + (score === 1 ? '' : 's');
+    els.progressFill.style.width = ((current + 1) / quizData.length * 100) + '%';
+
+    els.explanationText.textContent = item.explanation;
+    els.explanationLink.textContent = item.source.label + ' →';
+    els.explanationLink.href = item.source.url;
+    els.explanation.classList.remove('quiz-hidden');
+
+    els.nextBtn.textContent = (current === quizData.length - 1) ? 'Ver resultado' : 'Próxima pergunta';
+    els.nextBtn.classList.remove('quiz-hidden');
+  }
+
+  els.nextBtn.addEventListener('click', function () {
+    current++;
+    if (current < quizData.length) {
+      renderQuestion();
+    } else {
+      showResults();
+    }
+  });
+
+  function showResults(){
+    els.play.classList.add('quiz-hidden');
+    els.results.classList.remove('quiz-hidden');
+    els.finalScore.textContent = score;
+
+    var reaction;
+    if (score === quizData.length) {
+      reaction = 'Você não perdeu nada essa semana — leu tudo com atenção.';
+    } else if (score >= quizData.length - 2) {
+      reaction = 'Muito bem — só faltou um detalhe ou outro. Vale revisitar o Journal.';
+    } else {
+      reaction = 'A semana teve bastante coisa boa. Vale revisitar o Journal completo.';
+    }
+    els.reaction.textContent = reaction;
+
+    els.readingList.innerHTML = '';
+    quizData.forEach(function (item) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = item.source.url;
+      a.target = '_blank';
+      a.rel = 'noopener';
+      a.innerHTML = '<span>' + item.question.replace(/\?$/, '') + '</span><span class="qr-source">' + item.source.label + '</span>';
+      li.appendChild(a);
+      els.readingList.appendChild(li);
+    });
+  }
+
+  els.retryBtn.addEventListener('click', function () {
+    current = 0; score = 0;
+    els.results.classList.add('quiz-hidden');
+    els.play.classList.remove('quiz-hidden');
+    renderQuestion();
+  });
+
+  renderQuestion();
+</script>
+</body>
+</html>
