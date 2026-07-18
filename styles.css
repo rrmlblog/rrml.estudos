@@ -148,8 +148,9 @@ a{ color:inherit; }
   font-weight:340;
   color:var(--ink);
 }
-.profile-name{
+.hero h1.profile-name{
   font-size:clamp(1.8rem, 4.4vw, 3.6rem);
+  max-width:none;
   white-space:nowrap;
 }
 .hero-sub{
@@ -468,7 +469,7 @@ a{ color:inherit; }
   .nav-links{ gap:16px; }
   .nav-links a{ font-size:10px; }
   .hero{ padding:48px 0 48px; }
-  .profile-name{ white-space:normal; font-size:clamp(1.7rem, 8vw, 2.4rem); }
+  .hero h1.profile-name{ font-size:clamp(1.05rem, 5.5vw, 2.4rem); }
   .section-head{ flex-direction:column; align-items:flex-start; }
   .section-head .section-note{ text-align:left; }
 }
