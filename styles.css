@@ -148,6 +148,10 @@ a{ color:inherit; }
   font-weight:340;
   color:var(--ink);
 }
+.profile-name{
+  font-size:clamp(1.8rem, 4.4vw, 3.6rem);
+  white-space:nowrap;
+}
 .hero-sub{
   font-size:17px;
   font-weight:300;
@@ -298,11 +302,15 @@ a{ color:inherit; }
   width:100%; aspect-ratio:3/4; object-fit:cover;
   border-radius:2px;
 }
-.role-line{
-  font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
-  color:var(--ink-soft); margin:0 0 22px;
+.role-list{ margin:0 0 24px; }
+.role-item{
+  font-size:14px; line-height:1.6; font-weight:300;
+  color:var(--ink-soft); margin:0 0 6px;
 }
-.role-line span:not(:last-child)::after{ content:"·"; margin:0 10px; color:var(--line); }
+.role-item:last-child{ margin-bottom:0; }
+.role-org{ color:var(--ink); font-weight:400; }
+.role-sep{ margin:0 8px; color:var(--line); }
+.role-desc{ color:var(--ink-soft); }
 .bio p{
   font-size:16px; color:var(--ink-soft); line-height:1.85;
   margin:0 0 20px; max-width:var(--measure-narrow); font-weight:300;
@@ -460,6 +468,7 @@ a{ color:inherit; }
   .nav-links{ gap:16px; }
   .nav-links a{ font-size:10px; }
   .hero{ padding:48px 0 48px; }
+  .profile-name{ white-space:normal; font-size:clamp(1.7rem, 8vw, 2.4rem); }
   .section-head{ flex-direction:column; align-items:flex-start; }
   .section-head .section-note{ text-align:left; }
 }
