@@ -3,121 +3,76 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>@rrml.estudos — Atualizações semanais</title>
-<meta name="description" content="Arquivo de todas as atualizações semanais de psicologia, neuropsicologia e saúde mental — Brasil e mundo.">
+<title>rrml.estudos — um caderno de psicologia e neurociência</title>
+<meta name="description" content="Psicologia, neuropsicologia e ciência, reunidas em um espaço para quem acredita que aprender é um processo contínuo.">
 <link rel="icon" type="image/png" href="favicon.png?v=3">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://rrmlblog.github.io/rrml.estudos/">
-<meta property="og:title" content="@rrml.estudos — Atualizações semanais">
-<meta property="og:description" content="Arquivo de todas as atualizações semanais de psicologia, neuropsicologia e saúde mental — Brasil e mundo.">
+<meta property="og:title" content="rrml.estudos — um caderno de psicologia e neurociência">
+<meta property="og:description" content="Psicologia, neuropsicologia e ciência, reunidas em um espaço para quem acredita que aprender é um processo contínuo.">
 <meta property="og:image" content="https://rrmlblog.github.io/rrml.estudos/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="@rrml.estudos — Atualizações semanais">
-<meta name="twitter:description" content="Arquivo de todas as atualizações semanais de psicologia, neuropsicologia e saúde mental — Brasil e mundo.">
+<meta name="twitter:title" content="rrml.estudos — um caderno de psicologia e neurociência">
+<meta name="twitter:description" content="Psicologia, neuropsicologia e ciência, reunidas em um espaço para quem acredita que aprender é um processo contínuo.">
 <meta name="twitter:image" content="https://rrmlblog.github.io/rrml.estudos/og-image.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
-<style>
-  :root{
-    --bg:#eef3fb; --navy:#16233d; --muted:#5b6b84; --teal:#4fb3a0;
-    --card-border:#e1e7f0; --card-body:#3d4a5e; --source:#8592a6;
-    --blue-bg:#dbe9f8; --blue-text:#1a5296;
-    --green-bg:#d3f0e5; --green-text:#0f6e56;
-    --purple-bg:#ecdffa; --purple-text:#5b3696;
-    --pill-bg:#dfe9f7; --pill-text:#2c4874;
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0; background:var(--bg); color:var(--navy);
-    font-family:Arial,Helvetica,sans-serif;
-  }
-  .wrap{max-width:720px;margin:0 auto;padding:56px 24px 80px;}
-  header{margin-bottom:8px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;}
-  .handle{font-weight:700;color:var(--navy);font-size:24px;}
-  .tagline{color:var(--muted);font-size:14px;margin-top:4px;}
-  .ig-btn{
-    display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:#ffffff;
-    font-weight:700;font-size:13px;padding:9px 16px;border-radius:999px;
-    text-decoration:none;white-space:nowrap;
-  }
-  .ig-btn:hover{opacity:0.9;}
-  .header-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
-  .nav-link{color:var(--navy);font-weight:700;font-size:14px;text-decoration:none;}
-  .nav-link:hover{text-decoration:underline;}
-  .accent{width:44px;height:3px;background:var(--teal);margin:24px 0 20px;}
-  h1{font-family:Georgia,'Times New Roman',serif;color:var(--navy);font-size:32px;margin:0 0 8px;}
-  .lede{color:var(--muted);font-size:15px;margin:0 0 40px;line-height:1.6;}
-  .week{margin-bottom:56px;}
-  .week-date{
-    display:inline-flex;align-items:center;gap:6px;background:var(--pill-bg);
-    color:var(--pill-text);font-size:13px;font-weight:700;padding:7px 14px;
-    border-radius:999px;margin-bottom:20px;
-  }
-  .region{
-    font-family:Georgia,'Times New Roman',serif;font-weight:700;color:var(--navy);
-    font-size:18px;margin:24px 0 12px;
-  }
-  .card{
-    background:#ffffff;border:1px solid var(--card-border);border-radius:16px;
-    padding:20px;margin-bottom:14px;
-  }
-  .badge{
-    display:inline-block;font-weight:700;text-transform:uppercase;font-size:11px;
-    padding:4px 10px;border-radius:999px;margin-bottom:10px;
-  }
-  .badge.neuro{background:var(--blue-bg);color:var(--blue-text);}
-  .badge.saude{background:var(--green-bg);color:var(--green-text);}
-  .badge.neuropsic{background:var(--purple-bg);color:var(--purple-text);}
-  .card h3{
-    font-family:Georgia,'Times New Roman',serif;color:var(--navy);font-size:19px;
-    margin:0 0 8px;
-  }
-  .card p{font-size:14px;color:var(--card-body);line-height:1.6;margin:0 0 8px;}
-  .card a{color:var(--green-text);font-weight:700;font-size:13px;text-decoration:none;}
-  .card a:hover{text-decoration:underline;}
-  footer{
-    text-align:center;color:var(--muted);font-size:13px;margin-top:60px;
-    border-top:1px solid var(--card-border);padding-top:24px;
-  }
-  footer .handle{font-size:15px;display:block;margin-top:4px;}
-  .week-tabs{display:flex;gap:20px;margin:0 0 24px;border-bottom:1px solid var(--card-border);overflow-x:auto;}
-  .week-tab-btn{
-    font-family:Arial,Helvetica,sans-serif;font-size:14px;font-weight:700;
-    background:none;border:none;border-bottom:2px solid transparent;
-    color:var(--muted);cursor:pointer;padding:0 2px 12px;white-space:nowrap;
-  }
-  .week-tab-btn:hover{color:var(--navy);}
-  .week-tab-btn.active{color:var(--navy);border-bottom-color:var(--teal);}
-  .week-hidden{display:none;}
-  .filters{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 40px;}
-  .filter-btn{
-    font-family:Arial,Helvetica,sans-serif;font-size:13px;font-weight:700;
-    padding:7px 14px;border-radius:999px;border:1px solid var(--card-border);
-    background:#ffffff;color:var(--muted);cursor:pointer;
-  }
-  .filter-btn:hover{border-color:var(--teal);}
-  .filter-btn.active{background:var(--navy);border-color:var(--navy);color:#ffffff;}
-  .region.is-hidden, .card.is-hidden{display:none;}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<div class="wrap">
-  <header>
-    <div>
-      <div class="handle">@rrml.estudos</div>
-      <div class="tagline">Atualizações semanais · Psicologia &amp; Neuropsicologia</div>
+<body data-accent="cornflower">
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="nav-mark" href="index.html">rrml.estudos</a>
+    <ul class="nav-links">
+      <li><a href="index.html#journal">Journal</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a class="ig" href="https://www.instagram.com/rrml.estudos/" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Um caderno de estudos, toda semana</p>
+    <h1>Psicologia, neurociência e a <em>curiosidade</em> de aprender sempre.</h1>
+    <p class="hero-sub">Um espaço para quem acredita que aprender é um processo contínuo — achados de pesquisa, notas clínicas e reflexões sobre a mente, reunidos semana a semana, no Brasil e no mundo.</p>
+  </div>
+</header>
+
+<section class="triptych">
+  <div class="wrap">
+    <div class="triptych-grid">
+
+      <div class="triptych-item">
+        <p class="triptych-label"><span class="dot"></span>Artigo em destaque</p>
+        <h3>Como o cérebro reorganiza o aprendizado</h3>
+        <p>Ao aprender uma nova regra, o córtex pré-frontal passa de uma atividade dispersa para representações mais compactas e abstratas.</p>
+        <a class="triptych-link" href="https://www.nature.com/articles/s41593-026-02333-w" target="_blank" rel="noopener">Fonte: Nature Neuroscience →</a>
+      </div>
+
+      <div class="triptych-item">
+        <p class="triptych-label"><span class="dot"></span>Estou estudando</p>
+        <h3>Pirâmides Coloridas de Pfister</h3>
+        <p>Um instrumento projetivo que usa a organização de cores para explorar aspectos afetivos e da personalidade — revisitando a técnica para a prática em avaliação neuropsicológica.</p>
+        <span class="triptych-link is-quiet">Nota do caderno</span>
+      </div>
+
+      <div class="triptych-item">
+        <p class="triptych-label"><span class="dot"></span>Quiz da semana</p>
+        <h3>Você acompanhou as novidades desta semana?</h3>
+        <p>Uma pergunta rápida sobre psicologia e neurociência, toda sexta-feira.</p>
+        <span class="triptych-link is-quiet">Em breve →</span>
+      </div>
+
     </div>
-    <div class="header-actions">
-      <a class="nav-link" href="sobre.html">Sobre mim</a>
-      <a class="ig-btn" href="https://www.instagram.com/rrml.estudos/" target="_blank" rel="noopener">
-        <i class="ti ti-brand-instagram" style="font-size:16px;" aria-hidden="true"></i>
-        Seguir no Instagram
-      </a>
-    </div>
-  </header>
-  <div class="accent"></div>
-  <h1>O que aconteceu cada semana</h1>
-  <p class="lede">Arquivo de todas as atualizações semanais de psicologia, neuropsicologia e saúde mental — Brasil e mundo.</p>
+  </div>
+</section>
+
+<main class="wrap" id="journal">
+  <div class="section-head">
+    <h2>Journal</h2>
+    <p class="section-note">O arquivo completo das atualizações semanais, Brasil e mundo.</p>
+  </div>
 
   <div class="week-tabs" id="weekTabs"></div>
 
@@ -130,86 +85,95 @@
 
   <!-- WEEKLY_POSTS_START -->
   <section class="week" id="week-2026-07-12" data-month="2026-07">
-    <div class="week-date">06 – 12 jul 2026</div>
+    <div class="week-date">06 – 12 de julho, 2026</div>
 
-    <div class="region" data-region="brasil">🇧🇷 Brasil</div>
-    <div class="card" data-cat="saude" data-region="brasil">
-      <span class="badge saude">Saúde mental · Brasil</span>
+    <div class="region" data-region="brasil">Brasil</div>
+    <div class="entry" data-cat="saude" data-region="brasil">
+      <p class="entry-kicker">Saúde mental · Brasil</p>
       <h3>IBGE inicia coleta da Pesquisa Nacional de Saúde 2026</h3>
       <p>Cerca de 1,8 mil entrevistadores vão visitar 140 mil domicílios até novembro, incluindo pela primeira vez coleta de biomarcadores por exames de sangue e urina, além de questões sobre saúde mental, hábitos e uso de serviços de saúde.</p>
-      <a href="https://agenciabrasil.ebc.com.br/saude/noticia/2026-07/ibge-inicia-coleta-da-pesquisa-nacional-de-saude-2026" target="_blank" rel="noopener">Fonte: Agência Brasil →</a>
+      <a class="source" href="https://agenciabrasil.ebc.com.br/saude/noticia/2026-07/ibge-inicia-coleta-da-pesquisa-nacional-de-saude-2026" target="_blank" rel="noopener">Fonte: Agência Brasil →</a>
     </div>
-    <div class="card" data-cat="saude" data-region="brasil">
-      <span class="badge saude">Saúde mental · Brasil</span>
+    <div class="entry" data-cat="saude" data-region="brasil">
+      <p class="entry-kicker">Saúde mental · Brasil</p>
       <h3>Pesquisa nacional mapeia a saúde mental nas universidades brasileiras</h3>
       <p>O estudo Enasam-U, coordenado por UFRGS e Fiocruz com apoio do CNPq, vai avaliar estudantes e servidores de 50 universidades públicas para estimar a prevalência de transtornos mentais e orientar políticas no ensino superior.</p>
-      <a href="https://www.ufpb.br/noticias/ufpb-participa-de-pesquisa-inedita-que-mapeia-os-desafios-de-saude-mental-em-universidades-brasileiras/" target="_blank" rel="noopener">Fonte: UFPB →</a>
+      <a class="source" href="https://www.ufpb.br/noticias/ufpb-participa-de-pesquisa-inedita-que-mapeia-os-desafios-de-saude-mental-em-universidades-brasileiras/" target="_blank" rel="noopener">Fonte: UFPB →</a>
     </div>
 
-    <div class="region" data-region="mundo">🌍 Mundo</div>
-    <div class="card" data-cat="neuro" data-region="mundo">
-      <span class="badge neuro">Neurociência</span>
+    <div class="region" data-region="mundo">Mundo</div>
+    <div class="entry" data-cat="neuro" data-region="mundo">
+      <p class="entry-kicker">Neurociência</p>
       <h3>A segunda gravidez remodela o cérebro do seu próprio jeito</h3>
       <p>Comparando ressonâncias antes e depois de cada gestação, pesquisadores da Amsterdam UMC viram que a segunda gravidez altera redes cerebrais diferentes das ativadas na primeira — achado que pode ajudar a entender e prevenir a depressão pós-parto.</p>
-      <a href="https://www.nature.com/articles/s41467-026-69370-8" target="_blank" rel="noopener">Fonte: Nature Communications →</a>
+      <a class="source" href="https://www.nature.com/articles/s41467-026-69370-8" target="_blank" rel="noopener">Fonte: Nature Communications →</a>
     </div>
-    <div class="card" data-cat="neuropsic" data-region="mundo">
-      <span class="badge neuropsic">Neuropsicologia</span>
+    <div class="entry" data-cat="neuropsic" data-region="mundo">
+      <p class="entry-kicker">Neuropsicologia</p>
       <h3>Como o cérebro reorganiza o aprendizado</h3>
       <p>Ao aprender uma nova regra, o córtex pré-frontal passa de uma atividade dispersa e complexa para representações mais compactas e abstratas — o mecanismo que nos permite generalizar aprendizados para novas situações.</p>
-      <a href="https://www.nature.com/articles/s41593-026-02333-w" target="_blank" rel="noopener">Fonte: Nature Neuroscience →</a>
+      <a class="source" href="https://www.nature.com/articles/s41593-026-02333-w" target="_blank" rel="noopener">Fonte: Nature Neuroscience →</a>
     </div>
-    <div class="card" data-cat="saude" data-region="mundo">
-      <span class="badge saude">Saúde mental</span>
+    <div class="entry" data-cat="saude" data-region="mundo">
+      <p class="entry-kicker">Saúde mental</p>
       <h3>Sobreposição genética entre transtornos mentais graves e marcadores metabólicos</h3>
       <p>Pesquisa publicada no American Journal of Psychiatry mapeou a relação genética entre transtorno bipolar, depressão maior e esquizofrenia com marcadores metabólicos do sangue, ajudando a explicar por que essas condições têm pior saúde cardiometabólica associada.</p>
-      <a href="https://doi.org/10.1176/appi.ajp.20250259" target="_blank" rel="noopener">Fonte: American Journal of Psychiatry →</a>
+      <a class="source" href="https://doi.org/10.1176/appi.ajp.20250259" target="_blank" rel="noopener">Fonte: American Journal of Psychiatry →</a>
     </div>
   </section>
   <section class="week" id="week-2026-07-06" data-month="2026-07">
-    <div class="week-date">29 jun – 05 jul 2026</div>
+    <div class="week-date">29 de junho – 05 de julho, 2026</div>
 
-    <div class="region" data-region="brasil">🇧🇷 Brasil</div>
-    <div class="card" data-cat="saude" data-region="brasil">
-      <span class="badge saude">Saúde mental · Brasil</span>
+    <div class="region" data-region="brasil">Brasil</div>
+    <div class="entry" data-cat="saude" data-region="brasil">
+      <p class="entry-kicker">Saúde mental · Brasil</p>
       <h3>Afastamentos por saúde mental seguem em alta no país</h3>
       <p>Dados da Previdência Social mostram forte aumento nas licenças por transtornos mentais e comportamentais, com ansiedade e depressão liderando os casos e mulheres representando mais de 63% dos afastamentos.</p>
-      <a href="https://brasil.un.org/pt-br/292926-brasil-afastamentos-por-problemas-de-sa%C3%BAde-mental-aumentam-134" target="_blank" rel="noopener">Fonte: ONU Brasil →</a>
+      <a class="source" href="https://brasil.un.org/pt-br/292926-brasil-afastamentos-por-problemas-de-sa%C3%BAde-mental-aumentam-134" target="_blank" rel="noopener">Fonte: ONU Brasil →</a>
     </div>
-    <div class="card" data-cat="saude" data-region="brasil">
-      <span class="badge saude">Saúde mental · Brasil</span>
+    <div class="entry" data-cat="saude" data-region="brasil">
+      <p class="entry-kicker">Saúde mental · Brasil</p>
       <h3>Ministério da Saúde avança na primeira Pesquisa Nacional de Saúde Mental</h3>
       <p>O levantamento de base populacional (PNSM-Brasil) vai mapear a prevalência de depressão, ansiedade, uso de álcool/drogas e comportamento suicida entre adultos em todo o território nacional.</p>
-      <a href="https://www.gov.br/saude/pt-br/assuntos/noticias/2026/marco/ministerio-da-saude-inicia-coleta-de-dados-da-primeira-pesquisa-nacional-de-saude-mental-do-brasil" target="_blank" rel="noopener">Fonte: gov.br →</a>
+      <a class="source" href="https://www.gov.br/saude/pt-br/assuntos/noticias/2026/marco/ministerio-da-saude-inicia-coleta-de-dados-da-primeira-pesquisa-nacional-de-saude-mental-do-brasil" target="_blank" rel="noopener">Fonte: gov.br →</a>
     </div>
 
-    <div class="region" data-region="mundo">🌍 Mundo</div>
-    <div class="card" data-cat="neuro" data-region="mundo">
-      <span class="badge neuro">Neurociência</span>
+    <div class="region" data-region="mundo">Mundo</div>
+    <div class="entry" data-cat="neuro" data-region="mundo">
+      <p class="entry-kicker">Neurociência</p>
       <h3>Cientistas identificam novo mecanismo de morte neuronal no Alzheimer</h3>
       <p>Pesquisadores do King's College London descrevem a "carioptose", processo que liga o acúmulo de proteínas tóxicas à destruição do núcleo celular, presente em 35% das células do córtex frontal de pacientes com Alzheimer (vs. 15% em controles saudáveis).</p>
-      <a href="https://www.sciencedaily.com/releases/2026/06/260626124701.htm" target="_blank" rel="noopener">Fonte: ScienceDaily →</a>
+      <a class="source" href="https://www.sciencedaily.com/releases/2026/06/260626124701.htm" target="_blank" rel="noopener">Fonte: ScienceDaily →</a>
     </div>
-    <div class="card" data-cat="neuro" data-region="mundo">
-      <span class="badge neuro">Neurociência</span>
+    <div class="entry" data-cat="neuro" data-region="mundo">
+      <p class="entry-kicker">Neurociência</p>
       <h3>Beber para lidar com o estresse na juventude pode alterar o cérebro permanentemente</h3>
       <p>Estudo da Universidade de Massachusetts Amherst aponta que usar álcool como estratégia de enfrentamento no início da vida adulta reduz a flexibilidade mental décadas depois e aumenta o risco de recaída e declínio cognitivo.</p>
-      <a href="https://www.sciencedaily.com/releases/2026/06/260626030437.htm" target="_blank" rel="noopener">Fonte: ScienceDaily →</a>
+      <a class="source" href="https://www.sciencedaily.com/releases/2026/06/260626030437.htm" target="_blank" rel="noopener">Fonte: ScienceDaily →</a>
     </div>
-    <div class="card" data-cat="neuro" data-region="mundo">
-      <span class="badge neuro">Neurociência</span>
+    <div class="entry" data-cat="neuro" data-region="mundo">
+      <p class="entry-kicker">Neurociência</p>
       <h3>Saúde cerebral pode melhorar em qualquer idade, mesmo aos 90 anos</h3>
       <p>Estudo de três anos com quase 4 mil adultos (19 a 94 anos) mostra que treino cognitivo breve diário e hábitos saudáveis geram ganhos duradouros, inclusive em quem parte de níveis mais baixos — contrariando a ideia de declínio inevitável.</p>
-      <a href="https://www.sciencedaily.com/releases/2026/06/260613034222.htm" target="_blank" rel="noopener">Fonte: ScienceDaily →</a>
+      <a class="source" href="https://www.sciencedaily.com/releases/2026/06/260613034222.htm" target="_blank" rel="noopener">Fonte: ScienceDaily →</a>
     </div>
   </section>
   <!-- WEEKLY_POSTS_END -->
+</main>
 
-  <footer>
-    Conteúdo baseado em evidências, toda semana
-    <span class="handle">@rrml.estudos</span>
-  </footer>
-</div>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-mark">rrml.estudos</div>
+      <div class="footer-line">Conteúdo baseado em evidências, toda semana.</div>
+    </div>
+    <ul class="footer-nav">
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="https://www.instagram.com/rrml.estudos/" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+  </div>
+</footer>
+
 <script>
   var weekSections = document.querySelectorAll('.week');
   var weekTabsContainer = document.getElementById('weekTabs');
@@ -243,7 +207,7 @@
   });
 
   var buttons = document.querySelectorAll('.filter-btn');
-  var cards = document.querySelectorAll('.card');
+  var entries = document.querySelectorAll('.entry');
   var regions = document.querySelectorAll('.region');
 
   buttons.forEach(function (btn) {
@@ -252,17 +216,17 @@
       btn.classList.add('active');
       var filter = btn.getAttribute('data-filter');
 
-      cards.forEach(function (card) {
-        var show = filter === 'todos' || card.getAttribute('data-cat') === filter;
-        card.classList.toggle('is-hidden', !show);
+      entries.forEach(function (entry) {
+        var show = filter === 'todos' || entry.getAttribute('data-cat') === filter;
+        entry.classList.toggle('is-hidden', !show);
       });
 
       regions.forEach(function (region) {
         var section = region.closest('.week');
         var regionName = region.getAttribute('data-region');
         var anyVisible = Array.prototype.some.call(
-          section.querySelectorAll('.card[data-region="' + regionName + '"]'),
-          function (card) { return !card.classList.contains('is-hidden'); }
+          section.querySelectorAll('.entry[data-region="' + regionName + '"]'),
+          function (entry) { return !entry.classList.contains('is-hidden'); }
         );
         region.classList.toggle('is-hidden', !anyVisible);
       });

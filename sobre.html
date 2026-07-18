@@ -3,112 +3,71 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sobre mim — @rrml.estudos</title>
+<title>Sobre — rrml.estudos</title>
 <meta name="description" content="Rafaela Rossatti Muniz de Lima — estudante de Psicologia, Neuropsicologia na Casa Hunter e na Clínica Ciranda.">
 <link rel="icon" type="image/png" href="favicon.png?v=3">
 <link rel="apple-touch-icon" href="apple-touch-icon.png?v=3">
 <meta property="og:type" content="profile">
 <meta property="og:url" content="https://rrmlblog.github.io/rrml.estudos/sobre.html">
-<meta property="og:title" content="Sobre mim — @rrml.estudos">
+<meta property="og:title" content="Sobre — rrml.estudos">
 <meta property="og:description" content="Rafaela Rossatti Muniz de Lima — estudante de Psicologia, Neuropsicologia na Casa Hunter e na Clínica Ciranda.">
 <meta property="og:image" content="https://rrmlblog.github.io/rrml.estudos/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Sobre mim — @rrml.estudos">
+<meta name="twitter:title" content="Sobre — rrml.estudos">
 <meta name="twitter:description" content="Rafaela Rossatti Muniz de Lima — estudante de Psicologia, Neuropsicologia na Casa Hunter e na Clínica Ciranda.">
 <meta name="twitter:image" content="https://rrmlblog.github.io/rrml.estudos/og-image.png">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tabler-icons/2.44.0/iconfont/tabler-icons.min.css">
-<style>
-  :root{
-    --bg:#eef3fb; --navy:#16233d; --muted:#5b6b84; --teal:#4fb3a0;
-    --card-border:#e1e7f0; --card-body:#3d4a5e;
-    --pill-bg:#dfe9f7; --pill-text:#2c4874;
-  }
-  *{box-sizing:border-box;}
-  body{
-    margin:0; background:var(--bg); color:var(--navy);
-    font-family:Arial,Helvetica,sans-serif;
-  }
-  .wrap{max-width:720px;margin:0 auto;padding:56px 24px 80px;}
-  header{margin-bottom:8px;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;flex-wrap:wrap;}
-  .handle{font-weight:700;color:var(--navy);font-size:24px;}
-  .tagline{color:var(--muted);font-size:14px;margin-top:4px;}
-  .header-actions{display:flex;align-items:center;gap:16px;flex-wrap:wrap;}
-  .nav-link{color:var(--navy);font-weight:700;font-size:14px;text-decoration:none;}
-  .nav-link:hover{text-decoration:underline;}
-  .ig-btn{
-    display:inline-flex;align-items:center;gap:6px;background:var(--teal);color:#ffffff;
-    font-weight:700;font-size:13px;padding:9px 16px;border-radius:999px;
-    text-decoration:none;white-space:nowrap;
-  }
-  .ig-btn:hover{opacity:0.9;}
-  .accent{width:44px;height:3px;background:var(--teal);margin:24px 0 32px;}
-  .profile{
-    display:flex;gap:32px;align-items:flex-start;flex-wrap:wrap;margin-bottom:8px;
-  }
-  .profile img{
-    width:180px;height:180px;object-fit:cover;border-radius:16px;
-    border:1px solid var(--card-border);flex-shrink:0;
-  }
-  .profile-text{flex:1;min-width:260px;}
-  h1{font-family:Georgia,'Times New Roman',serif;color:var(--navy);font-size:23px;margin:0 0 6px;}
-  @media (min-width: 561px){
-    h1{white-space:nowrap;}
-  }
-  .role-pill{
-    display:inline-block;background:var(--pill-bg);color:var(--pill-text);
-    font-size:13px;font-weight:700;padding:6px 12px;border-radius:999px;margin:0 8px 8px 0;
-  }
-  .bio p{font-size:15px;color:var(--card-body);line-height:1.75;margin:0 0 16px;}
-  footer{
-    text-align:center;color:var(--muted);font-size:13px;margin-top:60px;
-    border-top:1px solid var(--card-border);padding-top:24px;
-  }
-  footer .handle{font-size:15px;display:block;margin-top:4px;}
-  @media (max-width: 560px){
-    .profile img{width:100%;height:auto;max-width:280px;margin:0 auto;}
-    .profile{justify-content:center;text-align:center;}
-  }
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<div class="wrap">
-  <header>
-    <div>
-      <div class="handle">@rrml.estudos</div>
-      <div class="tagline">Atualizações semanais · Psicologia &amp; Neuropsicologia</div>
-    </div>
-    <div class="header-actions">
-      <a class="nav-link" href="index.html">Atualizações</a>
-      <a class="ig-btn" href="https://www.instagram.com/rrml.estudos/" target="_blank" rel="noopener">
-        <i class="ti ti-brand-instagram" style="font-size:16px;" aria-hidden="true"></i>
-        Seguir no Instagram
-      </a>
-    </div>
-  </header>
-  <div class="accent"></div>
+<body data-accent="spring">
 
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="nav-mark" href="index.html">rrml.estudos</a>
+    <ul class="nav-links">
+      <li><a href="index.html#journal">Journal</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a class="ig" href="https://www.instagram.com/rrml.estudos/" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" style="padding-bottom:40px;">
+  <div class="wrap">
+    <p class="kicker">Quem escreve o caderno</p>
+    <h1 style="font-size:clamp(2.2rem, 4.6vw, 3.6rem); max-width:20ch;">Rafaela Rossatti <em>Muniz de Lima</em></h1>
+  </div>
+</header>
+
+<main class="wrap">
   <div class="profile">
     <img src="rafaela.jpg" alt="Rafaela Rossatti Muniz de Lima">
-    <div class="profile-text">
-      <h1>Rafaela Rossatti Muniz de Lima</h1>
-      <div>
-        <span class="role-pill">10º período de Psicologia</span>
-        <span class="role-pill">Neuropsicologia · Casa Hunter</span>
-        <span class="role-pill">Clínica Ciranda</span>
+    <div>
+      <p class="role-line">
+        <span>10º período de Psicologia</span>
+        <span>Neuropsicologia · Casa Hunter</span>
+        <span>Clínica Ciranda</span>
+      </p>
+      <div class="bio">
+        <p>Sou Rafaela Rossatti Muniz de Lima, estudante do 10º período de Psicologia, apaixonada por Neuropsicologia, Neurociência, Psicometria, Desenvolvimento Humano, Genética e Saúde Mental. Ao longo da minha formação, venho direcionando meus estudos e minha atuação para a compreensão da relação entre cérebro, comportamento e cognição, com especial interesse nos transtornos do neurodesenvolvimento, nas doenças genéticas raras e na avaliação neuropsicológica.</p>
+        <p>Desde 2024, integro a equipe da Casa Hunter, instituição de referência no acolhimento e apoio a pessoas com doenças raras e suas famílias, onde atuo na área da Neuropsicologia. Em 2025, iniciei minha atuação na Clínica Ciranda, ampliando minha experiência prática no contexto da avaliação neuropsicológica e do acompanhamento psicológico.</p>
+        <p>Acredito profundamente no poder da informação e do conhecimento como ferramentas de transformação. Por isso, busco compartilhar conteúdos científicos de forma acessível, responsável e baseada em evidências, contribuindo para a disseminação do conhecimento em Psicologia, Neurociência e Saúde Mental.</p>
       </div>
     </div>
   </div>
+</main>
 
-  <div class="bio">
-    <p>Sou Rafaela Rossatti Muniz de Lima, estudante do 10º período de Psicologia, apaixonada por Neuropsicologia, Neurociência, Psicometria, Desenvolvimento Humano, Genética e Saúde Mental. Ao longo da minha formação, venho direcionando meus estudos e minha atuação para a compreensão da relação entre cérebro, comportamento e cognição, com especial interesse nos transtornos do neurodesenvolvimento, nas doenças genéticas raras e na avaliação neuropsicológica.</p>
-    <p>Desde 2024, integro a equipe da Casa Hunter, instituição de referência no acolhimento e apoio a pessoas com doenças raras e suas famílias, onde atuo na área da Neuropsicologia. Em 2025, iniciei minha atuação na Clínica Ciranda, ampliando minha experiência prática no contexto da avaliação neuropsicológica e do acompanhamento psicológico.</p>
-    <p>Acredito profundamente no poder da informação e do conhecimento como ferramentas de transformação. Por isso, busco compartilhar conteúdos científicos de forma acessível, responsável e baseada em evidências, contribuindo para a disseminação do conhecimento em Psicologia, Neurociência e Saúde Mental.</p>
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div>
+      <div class="footer-mark">rrml.estudos</div>
+      <div class="footer-line">Conteúdo baseado em evidências, toda semana.</div>
+    </div>
+    <ul class="footer-nav">
+      <li><a href="index.html">Journal</a></li>
+      <li><a href="https://www.instagram.com/rrml.estudos/" target="_blank" rel="noopener">Instagram</a></li>
+    </ul>
   </div>
+</footer>
 
-  <footer>
-    Conteúdo baseado em evidências, toda semana
-    <span class="handle">@rrml.estudos</span>
-  </footer>
-</div>
 </body>
 </html>
