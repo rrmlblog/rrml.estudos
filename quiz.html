@@ -37,7 +37,7 @@
   <div class="wrap">
     <p class="kicker">Quiz da semana</p>
     <h1 style="font-size:clamp(2.2rem, 4.6vw, 3.6rem); max-width:20ch;">Você acompanhou as <em>novidades</em> desta semana?</h1>
-    <p class="hero-sub">Cinco perguntas rápidas sobre o resumo semanal de 13 – 19 de julho. Uma pergunta por vez, sem pressa.</p>
+    <p class="hero-sub">Cinco perguntas rápidas sobre o resumo semanal de 20 – 27 de julho. Uma pergunta por vez, sem pressa.</p>
   </div>
 </header>
 
@@ -97,49 +97,44 @@
 <script>
   var quizData = [
     {
-      question: "Quantos brasileiros vivem com transtornos mentais, segundo dados da OMS citados pelo boletim +Contexto da Câmara?",
-      options: ["18 milhões", "1,09 bilhão no mundo", "27 milhões no SUS", "67% da população"],
-      correct: 1,
-      explanation: "Segundo a OMS, mais de 1,09 bilhão de pessoas viviam com transtornos mentais em 2025 — 1 em cada 7 no mundo. No Brasil, os atendimentos pelo SUS subiram de 22,5 milhões (2023) para 27 milhões (2025).",
-      source: { label: "Fonte: Câmara dos Deputados", url: "https://www.camara.leg.br/assessoria-de-imprensa/1291130-nova-edicao-do-contexto-aborda-saude-mental/" }
+      question: "Qual universidade brasileira começou nesta semana a fase de entrevistas do Enasam-U, a maior pesquisa de saúde mental em universidades do país?",
+      options: ["UFJF", "USP", "UnB", "UFMG"],
+      correct: 0,
+      explanation: "A UFJF, junto com a UFPB, iniciou a coleta de dados do Enasam-U, estudo que avalia estudantes e servidores de 50 universidades públicas para mapear a prevalência de transtornos mentais no ensino superior.",
+      source: { label: "Fonte: UFJF", url: "https://www2.ufjf.br/noticias/2026/07/17/maior-pesquisa-nacional-sobre-saude-mental-em-universidades-chega-a-ufjf/" }
     },
     {
-      question: "Que teoria de 400 anos um estudo do ICMC-USP, publicado na Nature, ajudou a derrubar?",
+      question: "Quantas internações hospitalares foram analisadas no estudo internacional que ligou ondas de calor prolongadas a mais crises de saúde mental?",
+      options: ["260 mil", "2,6 milhões", "26 milhões", "2,6 bilhões"],
+      correct: 1,
+      explanation: "A pesquisa liderada pela Universidade Monash analisou 2,6 milhões de internações em quatro países — Brasil, Canadá, Chile e Nova Zelândia — e encontrou risco maior de crises psiquiátricas durante calor extremo, especialmente entre idosos.",
+      source: { label: "Fonte: Nature Health", url: "https://www.nature.com/articles/s44360-026-00166-2" }
+    },
+    {
+      question: "Qual célula cerebral tem papel central no 'ponto de virada' do Alzheimer identificado por pesquisadores da VIB e KU Leuven?",
+      options: ["Neurônios", "Microglia", "Astrócitos", "Oligodendrócitos"],
+      correct: 1,
+      explanation: "A resposta da microglia — as células de defesa do cérebro — às placas e emaranhados de tau ajuda a decidir se a doença evolui para demência, o que abre um novo alvo para tratamentos.",
+      source: { label: "Fonte: ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/07/260726015257.htm" }
+    },
+    {
+      question: "Por quanto tempo as mudanças cerebrais persistiram após uma única dose de psilocibina, no estudo da UC San Francisco e do Imperial College London?",
+      options: ["24 horas", "Uma semana", "Até um mês", "Um ano"],
+      correct: 2,
+      explanation: "Uma dose única de 25mg produziu mudanças na atividade e na estrutura cerebral detectáveis até um mês depois, associadas a ganhos de bem-estar — mesmo em quem nunca tinha usado psicodélicos.",
+      source: { label: "Fonte: Nature Communications / ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/07/260719040005.htm" }
+    },
+    {
+      question: "O que um estudo com mais de 214 mil pessoas em 14 países revelou sobre os fatores de risco de demência?",
       options: [
-        "A de que o cérebro para de se desenvolver na vida adulta",
-        "A de que sistemas com ritmos parecidos sempre sincronizam sozinhos",
-        "A de que a memória é armazenada em uma única região cerebral",
-        "A de que o sono não afeta o aprendizado"
+        "São idênticos em todo o mundo",
+        "Variam muito de um país para outro",
+        "Não têm relação com hipertensão",
+        "Afetam só pessoas com mais de 80 anos"
       ],
       correct: 1,
-      explanation: "A ideia de Christiaan Huygens, do século XVII, previa que sistemas com ritmos parecidos sincronizam espontaneamente aos pares. O novo estudo mostra que, em certos casos, um terceiro elemento é necessário para essa sincronização emergir.",
-      source: { label: "Fonte: ICMC-USP", url: "https://www.icmc.usp.br/noticias/7605-pesquisa-liderada-pelo-icmc-rompe-paradigma-cientifico-de-mais-de-400-anos-sobre-sincronizacao" }
-    },
-    {
-      question: "Qual medicamento, originalmente usado para prisão de ventre, melhorou a memória verbal em pessoas com histórico de depressão?",
-      options: ["Prucaloprida", "Sertralina", "Metilfenidato", "Melatonina"],
-      correct: 0,
-      explanation: "Em ensaio das universidades de Birmingham e Oxford, a prucaloprida melhorou memória verbal e velocidade de processamento — um caminho promissor contra o 'nevoeiro mental' que persiste em mais de 40% dos pacientes mesmo após a remissão da depressão.",
-      source: { label: "Fonte: ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/07/260712011751.htm" }
-    },
-    {
-      question: "No estudo RECOVER, o que a estimulação do nervo vago reduziu em pacientes com depressão resistente ao tratamento?",
-      options: ["Pressão arterial", "Ideação suicida", "Frequência cardíaca", "Uso de antidepressivos"],
-      correct: 1,
-      explanation: "A estimulação do nervo vago, usada como terapia adjuvante, diminuiu significativamente a ideação suicida em depressão grave resistente ao tratamento, com o efeito mantido por pelo menos dois anos.",
-      source: { label: "Fonte: The Journal of Clinical Psychiatry", url: "https://www.psychiatrist.com/jcp/vagus-nerve-stimulation-suicidal-ideation-treatment-resistant-major-depression-recover/" }
-    },
-    {
-      question: "Como pesquisadores financiados pelo NIH identificaram neurônios ligados à geração da linguagem humana?",
-      options: [
-        "Combinando gravações de neurônios únicos com modelos de IA",
-        "Usando apenas ressonância magnética funcional",
-        "Analisando eletroencefalogramas de sono",
-        "Comparando cérebros de diferentes espécies"
-      ],
-      correct: 0,
-      explanation: "Ao combinar registros de neurônios únicos com técnicas de inteligência artificial, os cientistas identificaram células cerebrais que codificam significado e gramática — um passo rumo a decodificar a fala a partir da atividade cerebral.",
-      source: { label: "Fonte: NIH", url: "https://www.nih.gov/news-events/news-releases/researchers-discover-single-cell-brain-activity-underlies-human-speech" }
+      explanation: "Fatores como baixa escolaridade, hipertensão e obesidade têm pesos bem diferentes conforme a região do mundo, o que sugere que estratégias de prevenção precisam ser adaptadas a cada população.",
+      source: { label: "Fonte: The Lancet Healthy Longevity", url: "https://www.thelancet.com/journals/lanhl/article/PIIS2666-7568(26)00051-6/fulltext" }
     }
   ];
 
