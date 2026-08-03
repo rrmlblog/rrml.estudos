@@ -97,44 +97,54 @@
 <script>
   var quizData = [
     {
-      question: "Qual universidade brasileira começou nesta semana a fase de entrevistas do Enasam-U, a maior pesquisa de saúde mental em universidades do país?",
-      options: ["UFJF", "USP", "UnB", "UFMG"],
-      correct: 0,
-      explanation: "A UFJF, junto com a UFPB, iniciou a coleta de dados do Enasam-U, estudo que avalia estudantes e servidores de 50 universidades públicas para mapear a prevalência de transtornos mentais no ensino superior.",
-      source: { label: "Fonte: UFJF", url: "https://www2.ufjf.br/noticias/2026/07/17/maior-pesquisa-nacional-sobre-saude-mental-em-universidades-chega-a-ufjf/" }
-    },
-    {
-      question: "Quantas internações hospitalares foram analisadas no estudo internacional que ligou ondas de calor prolongadas a mais crises de saúde mental?",
-      options: ["260 mil", "2,6 milhões", "26 milhões", "2,6 bilhões"],
+      question: "Quanto foi o investimento no novo núcleo de pesquisa da USP voltado a políticas públicas de saúde mental de jovens?",
+      options: ["R$ 2,8 milhões", "R$ 22,8 milhões", "R$ 228 milhões", "R$ 2,8 bilhões"],
       correct: 1,
-      explanation: "A pesquisa liderada pela Universidade Monash analisou 2,6 milhões de internações em quatro países — Brasil, Canadá, Chile e Nova Zelândia — e encontrou risco maior de crises psiquiátricas durante calor extremo, especialmente entre idosos.",
-      source: { label: "Fonte: Nature Health", url: "https://www.nature.com/articles/s44360-026-00166-2" }
+      explanation: "O núcleo do CISM, ligado ao Instituto de Psiquiatria da USP, recebeu R$ 22,8 milhões em parceria com o Child Mind Institute para embasar políticas de saúde mental infantojuvenil com dados de neurociência e epidemiologia.",
+      source: { label: "Fonte: Jornal da USP", url: "https://jornal.usp.br/universidade/centro-de-pesquisa-na-usp-cria-nucleo-para-apoiar-politicas-publicas-de-saude-mental-de-jovens/" }
     },
     {
-      question: "Qual célula cerebral tem papel central no 'ponto de virada' do Alzheimer identificado por pesquisadores da VIB e KU Leuven?",
-      options: ["Neurônios", "Microglia", "Astrócitos", "Oligodendrócitos"],
-      correct: 1,
-      explanation: "A resposta da microglia — as células de defesa do cérebro — às placas e emaranhados de tau ajuda a decidir se a doença evolui para demência, o que abre um novo alvo para tratamentos.",
-      source: { label: "Fonte: ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/07/260726015257.htm" }
-    },
-    {
-      question: "Por quanto tempo as mudanças cerebrais persistiram após uma única dose de psilocibina, no estudo da UC San Francisco e do Imperial College London?",
-      options: ["24 horas", "Uma semana", "Até um mês", "Um ano"],
-      correct: 2,
-      explanation: "Uma dose única de 25mg produziu mudanças na atividade e na estrutura cerebral detectáveis até um mês depois, associadas a ganhos de bem-estar — mesmo em quem nunca tinha usado psicodélicos.",
-      source: { label: "Fonte: Nature Communications / ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/07/260719040005.htm" }
-    },
-    {
-      question: "O que um estudo com mais de 214 mil pessoas em 14 países revelou sobre os fatores de risco de demência?",
+      question: "O que caracteriza o 'afetivismo', abordagem que vem ganhando espaço no cuidado em saúde mental no Brasil?",
       options: [
-        "São idênticos em todo o mundo",
-        "Variam muito de um país para outro",
-        "Não têm relação com hipertensão",
-        "Afetam só pessoas com mais de 80 anos"
+        "Foco exclusivo em diagnóstico",
+        "Priorizar a compreensão e o acolhimento das emoções",
+        "Uso exclusivo de medicação",
+        "Terapia baseada apenas em jogos"
       ],
       correct: 1,
-      explanation: "Fatores como baixa escolaridade, hipertensão e obesidade têm pesos bem diferentes conforme a região do mundo, o que sugere que estratégias de prevenção precisam ser adaptadas a cada população.",
-      source: { label: "Fonte: The Lancet Healthy Longevity", url: "https://www.thelancet.com/journals/lanhl/article/PIIS2666-7568(26)00051-6/fulltext" }
+      explanation: "O afetivismo propõe entender e acolher as emoções como caminho central de cuidado, em contraste com modelos mais centrados apenas em diagnóstico e sintomas.",
+      source: { label: "Fonte: JOLRN", url: "https://www.jolrn.com.br/2026/08/01/afetivismo-aposta-em-psicologia-baseada-nas-emocoes-para-fortalecer-o-cuidado-com-a-saude-mental-no-brasil/" }
+    },
+    {
+      question: "No estudo publicado na eBioMedicine, qual sistema cerebral a covid longa mostrou afetar diretamente?",
+      options: ["Sistema dopaminérgico", "Sistema visual", "Cerebelo", "Bulbo olfatório"],
+      correct: 0,
+      explanation: "Pesquisadores encontraram redução de neurônios liberadores de dopamina em pessoas com covid longa, alteração ligada a sintomas como apatia, falhas de memória e lentidão motora.",
+      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/long-covid-symptoms-linked-to-measurable-damage-in-the-brains-dopamine-system/" }
+    },
+    {
+      question: "O que o novo estudo sobre mindfulness identificou?",
+      options: [
+        "Nenhum efeito mensurável no cérebro",
+        "Mudanças mensuráveis na atividade cerebral",
+        "Apenas efeitos em relatos subjetivos",
+        "Redução do tamanho do hipocampo"
+      ],
+      correct: 1,
+      explanation: "O estudo encontrou alterações mensuráveis na atividade cerebral associadas à prática regular de mindfulness, reforçando sua base biológica como intervenção para regulação emocional.",
+      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/scientists-discover-new-insights-into-how-mindfulness-practices-shift-the-brains-neural-landscape/" }
+    },
+    {
+      question: "O estudo de neuroimagem sobre pensamento criativo científico mostrou que esses circuitos cerebrais são:",
+      options: [
+        "Idênticos aos do pensamento cotidiano",
+        "Distintos dos usados no pensamento cotidiano",
+        "Localizados só no cerebelo",
+        "Inativos durante tarefas de raciocínio"
+      ],
+      correct: 1,
+      explanation: "Pesquisadores identificaram redes cerebrais específicas ativadas durante o raciocínio criativo em contextos científicos, distintas das usadas no pensamento cotidiano.",
+      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/new-neuroimaging-study-maps-the-brain-networks-behind-scientific-creative-thinking/" }
     }
   ];
 
