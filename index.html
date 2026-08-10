@@ -75,6 +75,7 @@
     <p class="section-note">O arquivo completo das atualizações semanais, Brasil e mundo.</p>
   </div>
 
+  <div class="week-tabs" id="monthTabs"></div>
   <div class="week-tabs" id="weekTabs"></div>
 
   <div class="filters" id="filters">
@@ -325,35 +326,92 @@
 
 <script>
   var weekSections = document.querySelectorAll('.week');
+  var monthTabsContainer = document.getElementById('monthTabs');
   var weekTabsContainer = document.getElementById('weekTabs');
+  var monthNames = ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho', 'julho', 'agosto', 'setembro', 'outubro', 'novembro', 'dezembro'];
 
-  var allWeeksBtn = document.createElement('button');
-  allWeeksBtn.className = 'week-tab-btn active';
-  allWeeksBtn.textContent = 'Todas';
-  allWeeksBtn.setAttribute('data-week', 'todas');
-  weekTabsContainer.appendChild(allWeeksBtn);
+  function monthLabel(monthKey) {
+    var parts = monthKey.split('-');
+    return monthNames[parseInt(parts[1], 10) - 1] + ' ' + parts[0];
+  }
 
+  var months = [];
   weekSections.forEach(function (section) {
-    var dateLabel = section.querySelector('.week-date').textContent;
-    var btn = document.createElement('button');
-    btn.className = 'week-tab-btn';
-    btn.textContent = dateLabel;
-    btn.setAttribute('data-week', section.id);
-    weekTabsContainer.appendChild(btn);
+    var m = section.getAttribute('data-month');
+    if (m && months.indexOf(m) === -1) months.push(m);
   });
 
-  var weekTabButtons = weekTabsContainer.querySelectorAll('.week-tab-btn');
-  weekTabButtons.forEach(function (btn) {
-    btn.addEventListener('click', function () {
-      weekTabButtons.forEach(function (b) { b.classList.remove('active'); });
-      btn.classList.add('active');
-      var target = btn.getAttribute('data-week');
-      weekSections.forEach(function (section) {
-        var show = target === 'todas' || section.id === target;
-        section.classList.toggle('week-hidden', !show);
+  var currentMonth = 'todos';
+  var currentWeek = 'todas';
+
+  function applyVisibility() {
+    weekSections.forEach(function (section) {
+      var monthOk = currentMonth === 'todos' || section.getAttribute('data-month') === currentMonth;
+      var weekOk = currentWeek === 'todas' || section.id === currentWeek;
+      section.classList.toggle('week-hidden', !(monthOk && weekOk));
+    });
+  }
+
+  function renderWeekTabs() {
+    weekTabsContainer.innerHTML = '';
+
+    var allBtn = document.createElement('button');
+    allBtn.className = 'week-tab-btn' + (currentWeek === 'todas' ? ' active' : '');
+    allBtn.textContent = 'Todas';
+    allBtn.setAttribute('data-week', 'todas');
+    weekTabsContainer.appendChild(allBtn);
+
+    weekSections.forEach(function (section) {
+      if (currentMonth !== 'todos' && section.getAttribute('data-month') !== currentMonth) return;
+      var dateLabel = section.querySelector('.week-date').textContent;
+      var btn = document.createElement('button');
+      btn.className = 'week-tab-btn' + (currentWeek === section.id ? ' active' : '');
+      btn.textContent = dateLabel;
+      btn.setAttribute('data-week', section.id);
+      weekTabsContainer.appendChild(btn);
+    });
+
+    weekTabsContainer.querySelectorAll('.week-tab-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        currentWeek = btn.getAttribute('data-week');
+        weekTabsContainer.querySelectorAll('.week-tab-btn').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        applyVisibility();
       });
     });
-  });
+  }
+
+  function renderMonthTabs() {
+    monthTabsContainer.innerHTML = '';
+
+    var allBtn = document.createElement('button');
+    allBtn.className = 'week-tab-btn' + (currentMonth === 'todos' ? ' active' : '');
+    allBtn.textContent = 'Todos os meses';
+    allBtn.setAttribute('data-month', 'todos');
+    monthTabsContainer.appendChild(allBtn);
+
+    months.forEach(function (m) {
+      var btn = document.createElement('button');
+      btn.className = 'week-tab-btn' + (currentMonth === m ? ' active' : '');
+      btn.textContent = monthLabel(m);
+      btn.setAttribute('data-month', m);
+      monthTabsContainer.appendChild(btn);
+    });
+
+    monthTabsContainer.querySelectorAll('.week-tab-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        currentMonth = btn.getAttribute('data-month');
+        currentWeek = 'todas';
+        monthTabsContainer.querySelectorAll('.week-tab-btn').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+        renderWeekTabs();
+        applyVisibility();
+      });
+    });
+  }
+
+  renderMonthTabs();
+  renderWeekTabs();
 
   var buttons = document.querySelectorAll('.filter-btn');
   var entries = document.querySelectorAll('.entry');
