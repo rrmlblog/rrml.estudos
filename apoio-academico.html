@@ -479,12 +479,28 @@
   });
 
   /* ---- submit ----
-     Nenhum backend está configurado ainda. submitApoioRequest fica desacoplada de propósito:
-     troque o corpo dela por uma chamada real (fetch para uma API própria, Formspree, EmailJS etc.)
-     quando a integração for definida. Nenhuma credencial deve ser exposta no frontend. */
+     Envia o pedido por e-mail via FormSubmit.co (sem backend próprio — serviço gratuito que
+     recebe o POST e encaminha por e-mail). submitApoioRequest fica desacoplada de propósito:
+     se um dia trocar de serviço (Formspree, EmailJS, API própria etc.), só o corpo desta
+     função precisa mudar. Nenhuma credencial/senha é usada aqui — apenas o e-mail de destino,
+     que é público por natureza nesse tipo de integração. */
   async function submitApoioRequest(payload) {
-    await new Promise(function (resolve) { setTimeout(resolve, 700); });
-    console.log('Apoio Acadêmico — pedido pronto para envio (backend ainda não configurado):', payload);
+    var body = Object.assign({}, payload);
+    if (Array.isArray(body.comAjuda)) body.comAjuda = body.comAjuda.join(', ');
+    body._subject = 'Novo pedido de Apoio Acadêmico — ' + (payload.nome || 'sem nome');
+    body._template = 'table';
+    body._captcha = 'false';
+
+    var response = await fetch('https://formsubmit.co/ajax/rafaela.rrml@gmail.com', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+      body: JSON.stringify(body)
+    });
+    if (!response.ok) throw new Error('Falha no envio (' + response.status + ')');
+    var result = await response.json();
+    /* FormSubmit responde 200 mesmo quando não confirma o envio de fato (ex.: formulário
+       ainda não ativado pelo destinatário) — o campo success no corpo é quem diz a verdade. */
+    if (result && String(result.success) === 'false') throw new Error(result.message || 'FormSubmit recusou o envio');
     return { ok: true };
   }
   window.submitApoioRequest = submitApoioRequest;
