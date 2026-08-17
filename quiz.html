@@ -37,7 +37,7 @@
   <div class="wrap">
     <p class="kicker">Quiz da semana</p>
     <h1 style="font-size:clamp(2.2rem, 4.6vw, 3.6rem); max-width:20ch;">Você acompanhou as <em>novidades</em> desta semana?</h1>
-    <p class="hero-sub">Cinco perguntas rápidas sobre o resumo semanal de 03 – 09 de agosto. Uma pergunta por vez, sem pressa.</p>
+    <p class="hero-sub">Cinco perguntas rápidas sobre o resumo semanal de 10 – 16 de agosto. Uma pergunta por vez, sem pressa.</p>
   </div>
 </header>
 
@@ -97,54 +97,49 @@
 <script>
   var quizData = [
     {
-      question: "Segundo o estudo baseado no Global Burden of Disease 2023, quantos brasileiros de 5 a 29 anos preenchem critérios para pelo menos um transtorno mental?",
-      options: ["1,5 milhão", "5,6 milhões", "15,6 milhões", "25,6 milhões"],
+      question: "Segundo o estudo da USP (FMRP), como o estresse na adolescência afeta o córtex pré-frontal, em comparação com o estresse na vida adulta?",
+      options: [
+        "Não causa nenhuma alteração",
+        "Causa alterações persistentes, enquanto na vida adulta os efeitos tendem a ser passageiros",
+        "Causa apenas efeitos passageiros",
+        "Afeta só a memória de curto prazo"
+      ],
+      correct: 1,
+      explanation: "O estresse na adolescência altera de forma persistente a atividade de neurônios do córtex pré-frontal, diferente do que ocorre na vida adulta — o que ajuda a explicar por que essa fase é uma janela crítica para transtornos psiquiátricos.",
+      source: { label: "Fonte: Jornal da USP", url: "https://jornal.usp.br/ciencias/como-o-estresse-na-adolescencia-pode-afetar-a-saude-mental-dos-adultos/" }
+    },
+    {
+      question: "Desde 4 de agosto, quantos teleatendimentos mensais em saúde mental o Meu SUS Digital passou a oferecer para quem sofre com jogos e apostas?",
+      options: ["600", "10 mil", "50 mil", "100 mil"],
+      correct: 3,
+      explanation: "O serviço, iniciado em março com apenas 600 vagas, passou a oferecer até 100 mil teleatendimentos mensais gratuitos e sigilosos, conduzidos por psicólogos em parceria com o Hospital Sírio-Libanês.",
+      source: { label: "Fonte: Ministério da Saúde", url: "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/agosto/meu-sus-digital-oferecera-ate-100-mil-teleatendimentos-mensais-para-pessoas-com-necessidades-relacionadas-a-jogos-e-apostas" }
+    },
+    {
+      question: "Quantos dias de meditação intensiva bastaram, no estudo da UC San Diego, para gerar mudanças mensuráveis no cérebro, no sangue e no sistema imunológico?",
+      options: ["1 dia", "7 dias", "30 dias", "90 dias"],
+      correct: 1,
+      explanation: "Após apenas 7 dias de meditação intensiva, os participantes apresentaram sinais de maior neuroplasticidade e padrões de conectividade cerebral parecidos aos de experiências psicodélicas, sem uso de nenhuma substância.",
+      source: { label: "Fonte: ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/08/260807235243.htm" }
+    },
+    {
+      question: "No ensaio clínico da Charité (Berlim), o que aconteceu com os pesadelos de TEPT em mais de um terço dos pacientes tratados com dronabinol (THC)?",
+      options: [
+        "Pioraram",
+        "Não mudaram",
+        "Desapareceram por completo",
+        "Só diminuíram em frequência, nunca sumiram"
+      ],
       correct: 2,
-      explanation: "O levantamento estima 15,6 milhões de brasileiros de 5 a 29 anos com pelo menos um transtorno mental, com a ansiedade liderando como causa de incapacidade em quase todas as faixas etárias.",
-      source: { label: "Fonte: CNN Brasil", url: "https://www.cnnbrasil.com.br/saude/ansiedade-lidera-causas-de-incapacidade-entre-criancas-de-5-a-9-anos-veja/" }
+      explanation: "Após dez semanas de tratamento com dronabinol, os pesadelos desapareceram por completo em mais de um terço dos participantes, e mais da metade respondeu ao tratamento.",
+      source: { label: "Fonte: Nature Medicine / ScienceDaily", url: "http://www.sciencedaily.com/releases/2026/08/260805082450.htm" }
     },
     {
-      question: "Segundo o Mind Health Report 2026 (AXA), qual porcentagem dos adultos brasileiros relata condições adversas de saúde mental?",
-      options: ["10%", "25%", "40%", "60%"],
-      correct: 2,
-      explanation: "A pesquisa, com 19 mil pessoas em 18 países, mostra 40% dos adultos brasileiros relatando condições adversas de saúde mental — o Brasil fica atrás de países como Tailândia, México e EUA na pontuação geral.",
-      source: { label: "Fonte: CNN Brasil", url: "https://www.cnnbrasil.com.br/saude/brasil-definha-em-saude-mental-e-recorre-a-ia-para-tratamento-diz-estudo/" }
-    },
-    {
-      question: "No estudo com ressonância magnética sobre estresse e navegação, o que o cortisol prejudicou no cérebro dos participantes?",
-      options: [
-        "A visão periférica",
-        "O funcionamento das grid cells do córtex entorrinal",
-        "A produção de dopamina",
-        "O reflexo pupilar"
-      ],
-      correct: 1,
-      explanation: "O cortisol desorganizou as grid cells do córtex entorrinal, área-chave na navegação espacial e uma das primeiras afetadas no Alzheimer — um possível elo entre estresse crônico e risco de demência.",
-      source: { label: "Fonte: ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/08/260807035151.htm" }
-    },
-    {
-      question: "O que pesquisadores da Vanderbilt University desenvolveram em relação à proteína TAOK1, ligada ao Alzheimer?",
-      options: [
-        "Uma vacina",
-        "O primeiro inibidor seletivo da proteína",
-        "Um teste genético comercial",
-        "Um novo antidepressivo"
-      ],
-      correct: 1,
-      explanation: "Os pesquisadores criaram dois compostos-ferramenta, incluindo o primeiro inibidor seletivo da TAOK1 — proteína pouco investigada até aqui —, abrindo caminho para novos alvos terapêuticos no Alzheimer.",
-      source: { label: "Fonte: ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/08/260802223437.htm" }
-    },
-    {
-      question: "O que o estudo publicado na PNAS mostrou sobre os neurônios de orexina?",
-      options: [
-        "Eles controlam apenas o ciclo do sono",
-        "Eles codificam a expectativa de recompensa e sustentam o esforço motivado",
-        "Eles não têm relação com motivação",
-        "Eles são exclusivos do cérebro humano"
-      ],
-      correct: 1,
-      explanation: "Os neurônios de orexina codificam a expectativa de recompensa e sustentam o esforço motivado — achado que pode ajudar a entender déficits de motivação presentes em quadros como a depressão.",
-      source: { label: "Fonte: Medical Xpress", url: "https://medicalxpress.com/news/2026-08-orexin-neurons-uncover-brain-secret.html" }
+      question: "No teste do adesivo vestível de ultrassom criado pela Universidade do Texas em Austin, em quanto tempo os participantes passaram a entrar em sono REM?",
+      options: ["43 minutos mais cedo", "43 minutos mais tarde", "2 horas mais cedo", "Não houve mudança"],
+      correct: 0,
+      explanation: "O dispositivo antecipou a entrada em sono REM em 43 minutos e prolongou essa fase em cerca de 16 minutos, com sinais de melhor regulação do estresse.",
+      source: { label: "Fonte: ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/08/260806050709.htm" }
     }
   ];
 
