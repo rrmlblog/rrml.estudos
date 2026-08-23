@@ -37,7 +37,7 @@
   <div class="wrap">
     <p class="kicker">Quiz da semana</p>
     <h1 style="font-size:clamp(2.2rem, 4.6vw, 3.6rem); max-width:20ch;">Você acompanhou as <em>novidades</em> desta semana?</h1>
-    <p class="hero-sub">Cinco perguntas rápidas sobre o resumo semanal de 10 – 16 de agosto. Uma pergunta por vez, sem pressa.</p>
+    <p class="hero-sub">Cinco perguntas rápidas sobre o resumo semanal de 17 – 23 de agosto. Uma pergunta por vez, sem pressa.</p>
   </div>
 </header>
 
@@ -97,49 +97,54 @@
 <script>
   var quizData = [
     {
-      question: "Segundo o estudo da USP (FMRP), como o estresse na adolescência afeta o córtex pré-frontal, em comparação com o estresse na vida adulta?",
+      question: "Quantas organizações a Fundação Tide Setúbal vai selecionar, na 3ª edição do edital Territórios Clínicos, para receber apoio financeiro e acompanhamento técnico por três anos?",
+      options: ["3", "10", "17", "50"],
+      correct: 1,
+      explanation: "O edital vai selecionar dez organizações da periferia de São Paulo, com inscrições abertas até 31 de agosto, priorizando iniciativas de cuidado psicológico ou psicanalítico voltadas a populações marcadas por desigualdade e violência.",
+      source: { label: "Fonte: Agência Brasil", url: "https://agenciabrasil.ebc.com.br/saude/noticia/2026-08/fundacao-lanca-edital-para-ampliar-acesso-saude-mental-em-sao-paulo" }
+    },
+    {
+      question: "Para qual faixa etária o novo canal \"Pode Falar\", do aplicativo Meu SUS Digital, oferece acolhimento e orientação em saúde mental?",
+      options: ["Crianças de 0 a 6 anos", "Adolescentes e jovens de 13 a 24 anos", "Apenas gestantes", "Pessoas acima de 60 anos"],
+      correct: 1,
+      explanation: "A funcionalidade, criada em parceria com a Unicef, é voltada a jovens de 13 a 24 anos — o serviço já registrava 1,1 mil atendimentos por mês e, com o acesso facilitado pelo app, a expectativa é chegar a 11 mil atendimentos mensais.",
+      source: { label: "Fonte: Agência Brasil", url: "https://agenciabrasil.ebc.com.br/saude/noticia/2026-07/plataforma-oferece-escuta-em-saude-mental-para-jovens-no-sus-digital" }
+    },
+    {
+      question: "No estudo do MIT, como as áreas de linguagem do cérebro se comportaram enquanto os participantes resolviam quebra-cabeças lógicos?",
       options: [
-        "Não causa nenhuma alteração",
-        "Causa alterações persistentes, enquanto na vida adulta os efeitos tendem a ser passageiros",
-        "Causa apenas efeitos passageiros",
-        "Afeta só a memória de curto prazo"
+        "Ficaram hiperativas",
+        "Permaneceram praticamente inativas",
+        "Só ativaram em pessoas com afasia",
+        "Não foi possível medir"
       ],
       correct: 1,
-      explanation: "O estresse na adolescência altera de forma persistente a atividade de neurônios do córtex pré-frontal, diferente do que ocorre na vida adulta — o que ajuda a explicar por que essa fase é uma janela crítica para transtornos psiquiátricos.",
-      source: { label: "Fonte: Jornal da USP", url: "https://jornal.usp.br/ciencias/como-o-estresse-na-adolescencia-pode-afetar-a-saude-mental-dos-adultos/" }
+      explanation: "Pessoas com afasia grave resolveram os quebra-cabeças tão bem quanto pessoas sem o distúrbio, e em todos os participantes as áreas de linguagem ficaram praticamente inativas durante o raciocínio — evidência de que lógica e linguagem são sistemas cerebrais separados.",
+      source: { label: "Fonte: MIT News", url: "https://news.mit.edu/2026/separating-logic-and-language-0708" }
     },
     {
-      question: "Desde 4 de agosto, quantos teleatendimentos mensais em saúde mental o Meu SUS Digital passou a oferecer para quem sofre com jogos e apostas?",
-      options: ["600", "10 mil", "50 mil", "100 mil"],
-      correct: 3,
-      explanation: "O serviço, iniciado em março com apenas 600 vagas, passou a oferecer até 100 mil teleatendimentos mensais gratuitos e sigilosos, conduzidos por psicólogos em parceria com o Hospital Sírio-Libanês.",
-      source: { label: "Fonte: Ministério da Saúde", url: "https://www.gov.br/saude/pt-br/assuntos/noticias-ms/2026/agosto/meu-sus-digital-oferecera-ate-100-mil-teleatendimentos-mensais-para-pessoas-com-necessidades-relacionadas-a-jogos-e-apostas" }
-    },
-    {
-      question: "Quantos dias de meditação intensiva bastaram, no estudo da UC San Diego, para gerar mudanças mensuráveis no cérebro, no sangue e no sistema imunológico?",
-      options: ["1 dia", "7 dias", "30 dias", "90 dias"],
-      correct: 1,
-      explanation: "Após apenas 7 dias de meditação intensiva, os participantes apresentaram sinais de maior neuroplasticidade e padrões de conectividade cerebral parecidos aos de experiências psicodélicas, sem uso de nenhuma substância.",
-      source: { label: "Fonte: ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/08/260807235243.htm" }
-    },
-    {
-      question: "No ensaio clínico da Charité (Berlim), o que aconteceu com os pesadelos de TEPT em mais de um terço dos pacientes tratados com dronabinol (THC)?",
+      question: "No estudo finlandês que acompanhou 260 crianças por 8 anos, o que aconteceu com o processamento cognitivo de quem passou mais tempo em telas na infância?",
       options: [
-        "Pioraram",
-        "Não mudaram",
-        "Desapareceram por completo",
-        "Só diminuíram em frequência, nunca sumiram"
+        "Piorou de forma significativa",
+        "Não houve nenhuma diferença",
+        "Foi melhor aos 16 anos, avaliado pela bateria CogState",
+        "Só a memória de longo prazo piorou"
       ],
       correct: 2,
-      explanation: "Após dez semanas de tratamento com dronabinol, os pesadelos desapareceram por completo em mais de um terço dos participantes, e mais da metade respondeu ao tratamento.",
-      source: { label: "Fonte: Nature Medicine / ScienceDaily", url: "http://www.sciencedaily.com/releases/2026/08/260805082450.htm" }
+      explanation: "Contrariando a hipótese inicial dos pesquisadores, quem passou mais horas em telas na infância apresentou melhor atenção, memória de trabalho e processamento cognitivo aos 16 anos — para os autores, o que importa é o tipo de atividade feita na tela, não o tempo em si.",
+      source: { label: "Fonte: ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/08/260815064803.htm" }
     },
     {
-      question: "No teste do adesivo vestível de ultrassom criado pela Universidade do Texas em Austin, em quanto tempo os participantes passaram a entrar em sono REM?",
-      options: ["43 minutos mais cedo", "43 minutos mais tarde", "2 horas mais cedo", "Não houve mudança"],
-      correct: 0,
-      explanation: "O dispositivo antecipou a entrada em sono REM em 43 minutos e prolongou essa fase em cerca de 16 minutos, com sinais de melhor regulação do estresse.",
-      source: { label: "Fonte: ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/08/260806050709.htm" }
+      question: "No estudo com 256 pessoas em primeiro episódio de psicose, o que se mostrou mais eficaz para prever recaídas: a quantidade de contato social ou a qualidade da experiência social?",
+      options: [
+        "A quantidade de contato social",
+        "A qualidade da experiência social relatada pelo celular",
+        "Nenhuma das duas variáveis previu recaídas",
+        "Só exames de imagem cerebral previram recaídas"
+      ],
+      correct: 1,
+      explanation: "Avaliações diárias pelo smartphone mostraram que a qualidade da experiência social relatada prevê recaída de sintomas psicóticos melhor do que simplesmente medir quanto contato social a pessoa teve — um sinal de alerta capturável por check-ins digitais breves.",
+      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/brief-smartphone-check-ins-can-forecast-the-return-of-psychotic-symptoms/" }
     }
   ];
 
