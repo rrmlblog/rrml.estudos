@@ -466,6 +466,53 @@ a{ color:inherit; }
   .newsletter-form button{ width:100%; }
 }
 
+/* ---------- Newsletter toast ---------- */
+
+.newsletter-toast{
+  position:fixed; right:24px; bottom:24px; z-index:30;
+  width:300px; max-width:calc(100vw - 32px);
+  background:var(--warm-white); border:1px solid var(--line);
+  padding:20px 20px 22px; border-radius:2px;
+  transform:translateY(140%); opacity:0; pointer-events:none;
+  transition:transform .5s ease, opacity .5s ease;
+}
+.newsletter-toast.is-visible{ transform:translateY(0); opacity:1; pointer-events:auto; }
+.newsletter-toast-close{
+  position:absolute; top:8px; right:10px;
+  background:none; border:none; cursor:pointer;
+  font-size:18px; line-height:1; color:var(--ink-faint); padding:4px;
+}
+.newsletter-toast-close:hover{ color:var(--ink); }
+.newsletter-toast-kicker{
+  font-size:10.5px; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--ink-soft); margin:0 0 10px; padding-right:20px;
+}
+.newsletter-toast-kicker .dot{
+  display:inline-block; width:6px; height:6px; border-radius:50%;
+  background:var(--accent); margin-right:7px; vertical-align:1px;
+}
+.newsletter-toast-text{
+  font-family:var(--font-display); font-weight:400; font-size:15px;
+  line-height:1.4; color:var(--ink); margin:0 0 14px;
+}
+.newsletter-toast-form{ display:flex; flex-direction:column; gap:8px; }
+.newsletter-toast-form input[type="email"]{
+  font-family:var(--font-body); font-size:13.5px; color:var(--ink);
+  background:var(--paper); border:1px solid var(--line); border-radius:2px;
+  padding:10px 12px;
+}
+.newsletter-toast-form input[type="email"]::placeholder{ color:var(--ink-faint); }
+.newsletter-toast-form input[type="email"]:focus{ outline:none; border-color:var(--ink-faint); }
+.newsletter-toast-form button{
+  font-family:var(--font-body); font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
+  background:var(--ink); color:var(--paper); border:none; border-radius:2px;
+  padding:11px 16px; cursor:pointer;
+}
+.newsletter-toast-form button:hover{ opacity:0.88; }
+@media (max-width:560px){
+  .newsletter-toast{ left:16px; right:16px; bottom:16px; width:auto; }
+}
+
 /* ---------- Footer ---------- */
 
 .site-footer{

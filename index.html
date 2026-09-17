@@ -531,6 +531,47 @@
   </div>
 </footer>
 
+<div class="newsletter-toast" id="newsletterToast">
+  <button class="newsletter-toast-close" id="newsletterToastClose" aria-label="Fechar">&times;</button>
+  <p class="newsletter-toast-kicker"><span class="dot"></span>Resumo por e-mail</p>
+  <p class="newsletter-toast-text">Receba as novidades da semana no seu e-mail.</p>
+  <form
+    action="https://buttondown.com/api/emails/embed-subscribe/rossatti_muniz_de_lima"
+    method="post"
+    target="popupwindow"
+    onsubmit="window.open('https://buttondown.com/rossatti_muniz_de_lima', 'popupwindow')"
+    class="newsletter-toast-form"
+    id="newsletterToastForm"
+  >
+    <input type="email" name="email" id="bd-email-toast" placeholder="seu@email.com" aria-label="Seu e-mail" required>
+    <input type="hidden" value="1" name="embed">
+    <button type="submit">Assinar</button>
+  </form>
+</div>
+
+<script>
+  (function () {
+    var KEY = 'rrml-newsletter-toast-dismissed';
+    var toast = document.getElementById('newsletterToast');
+    var closeBtn = document.getElementById('newsletterToastClose');
+    var form = document.getElementById('newsletterToastForm');
+    if (!toast) return;
+
+    var alreadyDismissed = false;
+    try { alreadyDismissed = !!localStorage.getItem(KEY); } catch (e) {}
+    if (alreadyDismissed) return;
+
+    setTimeout(function () { toast.classList.add('is-visible'); }, 4000);
+
+    function dismiss() {
+      toast.classList.remove('is-visible');
+      try { localStorage.setItem(KEY, '1'); } catch (e) {}
+    }
+    closeBtn.addEventListener('click', dismiss);
+    form.addEventListener('submit', dismiss);
+  })();
+</script>
+
 <script>
   var weekSections = document.querySelectorAll('.week');
   var monthTabsContainer = document.getElementById('monthTabs');
