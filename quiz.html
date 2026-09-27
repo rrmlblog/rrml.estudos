@@ -37,7 +37,7 @@
   <div class="wrap">
     <p class="kicker">Quiz da semana</p>
     <h1 style="font-size:clamp(2.2rem, 4.6vw, 3.6rem); max-width:20ch;">Você acompanhou as <em>novidades</em> desta semana?</h1>
-    <p class="hero-sub">Cinco perguntas rápidas sobre o resumo semanal de 14 – 20 de setembro. Uma pergunta por vez, sem pressa.</p>
+    <p class="hero-sub">Cinco perguntas rápidas sobre o resumo semanal de 21 – 27 de setembro. Uma pergunta por vez, sem pressa.</p>
   </div>
 </header>
 
@@ -97,44 +97,49 @@
 <script>
   var quizData = [
     {
-      question: "Na pesquisa nacional da Amib/CFM com 2.338 médicos intensivistas brasileiros, que porcentagem precisa de atenção à saúde emocional?",
-      options: ["Cerca de 20%", "Cerca de 45%", "Cerca de 65%", "Cerca de 80%"],
-      correct: 3,
-      explanation: "O inquérito nacional encontrou 79,7% dos médicos intensivistas precisando de atenção à saúde emocional, 48,5% com exaustão emocional elevada e 45,6% com despersonalização. Médicos mais especializados apresentaram menor esgotamento que generalistas atuando em UTI.",
-      source: { label: "Fonte: Agência Brasil", url: "https://agenciabrasil.ebc.com.br/saude/noticia/2026-09/estudo-aponta-esgotamento-emocional-e-burnout-de-medicos-de-uti" }
-    },
-    {
-      question: "Segundo dados do INSS, quantos benefícios por incapacidade temporária ligados a transtornos mentais foram concedidos em 2025?",
-      options: ["Cerca de 150 mil", "Cerca de 300 mil", "Cerca de 546 mil", "Cerca de 900 mil"],
+      question: "Após o anúncio do fim das apostas online, qual é o custo social anual estimado das bets no Brasil, segundo o Ministério da Saúde?",
+      options: ["Cerca de R$ 3,8 bilhões", "Cerca de R$ 12 bilhões", "Cerca de R$ 38,8 bilhões", "Cerca de R$ 150 bilhões"],
       correct: 2,
-      explanation: "Foram 546.254 benefícios em 2025, alta de 15,66% sobre 2024 e o quinto ano seguido de crescimento — com os casos de burnout mais que triplicados desde 2023. Desde maio de 2026, a nova NR-1 passou a exigir das empresas o mapeamento de riscos psicossociais no trabalho.",
-      source: { label: "Fonte: Isso É São Paulo", url: "https://www.issoesaopaulo.com.br/2026/09/afastamentos-por-saude-mental-batem.html" }
+      explanation: "As apostas geram um custo social estimado em R$ 38,8 bilhões por ano, dos quais R$ 17 bilhões estão ligados a mortes por suicídio. O ministério vai intensificar a busca ativa de apostadores habituais para oferecer apoio em saúde mental, via rede digital e telessaúde do SUS.",
+      source: { label: "Fonte: Agência Brasil", url: "https://agenciabrasil.ebc.com.br/saude/noticia/2026-09/saude-fara-busca-ativa-de-apostadores-apos-fim-das-bets" }
     },
     {
-      question: "O maior estudo genético já feito sobre o Big Five, publicado na Nature com até 1,14 milhão de pessoas, encontrou quantas variantes genéticas associadas à personalidade?",
-      options: ["Cerca de 100", "Cerca de 500", "Cerca de 1.260", "Cerca de 5.000"],
+      question: "Na pesquisa da Fundacentro com a Fenaj com 257 jornalistas brasileiros, que parcela apresentou sintomas de depressão?",
+      options: ["10%", "25%", "50%", "75%"],
       correct: 2,
-      explanation: "Liderada pela Michigan State University, a análise encontrou 1.260 variantes genéticas associadas a extroversão, amabilidade, conscienciosidade, neuroticismo e abertura à experiência — mais de 800 delas inéditas, com resultados consistentes entre países, idades e comparações dentro da mesma família.",
-      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/massive-study-of-over-a-million-people-identifies-hundreds-of-genetic-variants-linked-to-personality/" }
+      explanation: "Metade dos jornalistas (50%) apresentou sintomas de depressão — 25% em nível grave ou extremamente grave. A pesquisa também encontrou 48% com insônia, 36% com episódios de ansiedade, e 61% com pouco apoio de colegas e chefias.",
+      source: { label: "Fonte: Agência Brasil", url: "https://agenciabrasil.ebc.com.br/saude/noticia/2026-09/assedio-e-sobrecarga-ameacam-saude-mental-de-jornalistas-diz-pesquisa" }
     },
     {
-      question: "No ensaio de Oxford com 59 pacientes deprimidos, o que psilocibina e escitalopram tiveram em comum após seis semanas?",
+      question: "O atlas do consórcio PsychAD, liderado pelo Mount Sinai, analisou núcleos de células de quantos cérebros doados?",
+      options: ["Cerca de 150", "Cerca de 500", "Cerca de 1.500", "Cerca de 15.000"],
+      correct: 2,
+      explanation: "Foram 6,3 milhões de núcleos celulares de 1.494 doadores, cobrindo Alzheimer, Parkinson, doença de corpos de Lewy, demência vascular, esquizofrenia e bipolaridade. Os achados saíram em nove artigos coordenados nas revistas do grupo Nature.",
+      source: { label: "Fonte: Medical Xpress", url: "https://medicalxpress.com/news/2026-09-large-scale-world-comprehensive-cell.html" }
+    },
+    {
+      question: "Segundo o estudo de Stanford na Nature Neuroscience, o que a descoberta das duas origens do cérebro permitiu fazer pela primeira vez?",
       options: [
-        "Nenhum efeito mensurável no cérebro",
-        "Ambos reduziram a tendência do cérebro de interpretar rostos neutros como negativos",
-        "Ambos pioraram o viés emocional negativo",
-        "Apenas a psilocibina teve efeito"
+        "Transplantar um hemisfério cerebral",
+        "Cultivar em laboratório neurônios motores humanos do rombencéfalo",
+        "Curar a ELA em camundongos",
+        "Mapear todas as sinapses do cérebro humano"
       ],
       correct: 1,
-      explanation: "Tanto a psilocibina quanto o escitalopram (antidepressivo padrão) reduziram, ao longo do ensaio, o viés de interpretar expressões faciais neutras como negativas — sugerindo que o efeito rápido e duradouro da psilocibina pode depender de outros mecanismos além dessa mudança de viés.",
-      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/psilocybin-and-standard-antidepressants-both-shift-the-brain-away-from-negative/" }
+      explanation: "O prosencéfalo e o mesencéfalo surgem de células que expressam Otx2, e o rombencéfalo de outra linhagem, marcada pelo Gbx2. Entendendo isso, a equipe cultivou pela primeira vez neurônios motores humanos do rombencéfalo, o que deve ajudar a estudar doenças como ELA e AME.",
+      source: { label: "Fonte: ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/09/260920222352.htm" }
     },
     {
-      question: "Segundo o estudo do New York Genome Center publicado na Science, entre que idades o cérebro passa por uma reorganização abrupta ligada ao risco de Alzheimer?",
-      options: ["Entre 20 e 35 anos", "Entre 35 e 50 anos", "Entre 50 e 75 anos", "Apenas depois dos 80 anos"],
+      question: "No estudo suíço com 32 pacientes reduzindo antidepressivos, como os pesquisadores interpretaram os picos de ansiedade e humor deprimido após cada corte de dose?",
+      options: [
+        "Como recaída da depressão",
+        "Como efeito placebo",
+        "Como reação de abstinência ao medicamento",
+        "Como efeito da psicoterapia"
+      ],
       correct: 2,
-      explanation: "Entre os 50 e os 75 anos, os pesquisadores mapearam o declínio das células microgliais embrionárias (substituídas por células de perfil mais inflamatório vindas do sangue), o enfraquecimento da barreira hematoencefálica e a desorganização da arquitetura do genoma dentro dos neurônios — um conjunto de mudanças que ajuda a explicar o salto no risco de doenças neurodegenerativas nessa fase.",
-      source: { label: "Fonte: ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/09/260914102441.htm" }
+      explanation: "Os picos surgiam logo após cada redução e se dissipavam nos períodos de dose estável — padrão típico de abstinência, não de recaída. Reduções pequenas (até 25% da dose mínima terapêutica) praticamente evitaram esses picos.",
+      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/emotional-distress-when-stopping-antidepressants-appears-to-be-due-to-withdrawal-not-relapse/" }
     }
   ];
 
