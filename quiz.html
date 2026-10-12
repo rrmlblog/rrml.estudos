@@ -37,7 +37,7 @@
   <div class="wrap">
     <p class="kicker">Quiz da semana</p>
     <h1 style="font-size:clamp(2.2rem, 4.6vw, 3.6rem); max-width:20ch;">Você acompanhou as <em>novidades</em> desta semana?</h1>
-    <p class="hero-sub">Cinco perguntas rápidas sobre o resumo semanal de 28 de setembro – 04 de outubro. Uma pergunta por vez, sem pressa.</p>
+    <p class="hero-sub">Cinco perguntas rápidas sobre o resumo semanal de 05 – 11 de outubro. Uma pergunta por vez, sem pressa.</p>
   </div>
 </header>
 
@@ -97,49 +97,54 @@
 <script>
   var quizData = [
     {
-      question: "Segundo a PeNSE 2024, que parcela das meninas de 13 a 17 anos relatou vontade de se machucar de propósito?",
-      options: ["Cerca de 10%", "Cerca de 20%", "Cerca de 43%", "Cerca de 70%"],
+      question: "Segundo o Monitor da Saúde 2026 (Ipsos), que parcela dos brasileiros aponta a saúde mental entre os maiores problemas de saúde do país?",
+      options: ["Cerca de 28%", "Cerca de 48%", "Cerca de 58%", "Cerca de 75%"],
       correct: 2,
-      explanation: "43,4% das meninas relataram vontade de se machucar de propósito, contra 20,5% dos meninos. Também 25% delas acham que \"a vida não vale a pena\" (12% entre eles). Sérgio Kodato (FFCLRP-USP) aponta socialização de gênero, padrões corporais e redes sociais como fatores.",
-      source: { label: "Fonte: Jornal da USP", url: "https://jornal.usp.br/atualidades/pressoes-sociais-causam-grande-impacto-na-saude-mental-de-meninas-adolescentes/" }
+      explanation: "58% dos brasileiros citaram a saúde mental, seis pontos a mais que em 2025 e acima da média global de 48% (o Chile lidera com 75%). A diferença de gênero é grande: 68% das mulheres contra 47% dos homens. A pesquisa mede percepção, não diagnósticos.",
+      source: { label: "Fonte: Jornal Pequeno", url: "https://jornalpequeno.com.br/2026/10/10/saude-mental-preocupa-58-dos-brasileiros-aponta-pesquisa/" }
     },
     {
-      question: "Segundo Maria Júlia Kovács (IP-USP), o que é correto afirmar sobre o perfil de risco para o suicídio?",
+      question: "Na pesquisa da Robert Half sobre burnout, qual foi o fator mais citado pelos trabalhadores brasileiros?",
       options: [
-        "Atinge quase só jovens",
-        "Não existe um perfil único: homens morrem mais, mulheres tentam mais",
-        "Mulheres morrem mais por suicídio que homens",
-        "Só ocorre em pessoas com diagnóstico psiquiátrico prévio"
+        "Tempo de deslocamento",
+        "Sobrecarga por equipes enxutas",
+        "Sensação de carreira estagnada",
+        "Queda de motivação após reestruturações"
       ],
       correct: 1,
-      explanation: "Não há um perfil único. Homens morrem mais por suicídio, mulheres tentam com mais frequência, idosos têm mortalidade proporcionalmente alta e a incidência cresce entre jovens. Sinais de alerta incluem desesperança e mudanças bruscas de comportamento; o CVV atende pelo 188.",
-      source: { label: "Fonte: Jornal da USP", url: "https://jornal.usp.br/radio-usp/suicidio-e-problema-de-saude-publica-e-exige-atencao-permanente/" }
+      explanation: "A sobrecarga causada por equipes reduzidas foi citada por 52%, seguida por carreira estagnada (43%), deslocamento (37%) e desmotivação após reestruturações (35%). No geral, 59% dos brasileiros deram nota de 6 a 10 para o próprio esgotamento.",
+      source: { label: "Fonte: Seu Dinheiro", url: "https://www.seudinheiro.com/2026/carreiras/saude-mental-no-trabalho-pesquisa-da-robert-half-mostra-os-4-fatores-que-mais-geram-burnout-no-pais-giov/" }
     },
     {
-      question: "No estudo da UW Medicine com 2,56 milhões de crianças, qual foi a conclusão sobre a vacina MMR e o autismo?",
+      question: "No estudo da JAMA Psychiatry sobre TDAH e cognição na velhice, o que aconteceu com a associação quando os diagnósticos precisavam estar separados por oito anos ou mais?",
       options: [
-        "A vacina dobrou o risco de autismo",
-        "Não houve associação entre a vacina e o diagnóstico de autismo",
-        "A vacina preveniu o autismo",
-        "O efeito só apareceu em meninos"
+        "Ficou ainda mais forte",
+        "Caiu bastante",
+        "Permaneceu igual",
+        "Inverteu, virando um efeito protetor"
       ],
       correct: 1,
-      explanation: "A razão de risco ajustada foi 0,97 (IC 99%: 0,91–1,03), sem significância estatística — ou seja, nenhuma associação. Pequenas variações em outras janelas de vacinação foram atribuídas a vieses residuais, não a um efeito protetor.",
-      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/study-of-2-5-million-children-finds-no-link-between-mmr-vaccine-and-autism/" }
+      explanation: "O risco ajustado, de mais de quatro vezes, caiu bastante com intervalos maiores entre os diagnósticos — sinal de que parte da associação pode refletir sintomas cognitivos iniciais confundidos com TDAH. Ainda assim, 6,7% das pessoas com TDAH desenvolveram comprometimento cognitivo, contra 3,4% sem o diagnóstico.",
+      source: { label: "Fonte: Medical Xpress", url: "https://medicalxpress.com/news/2026-10-health-link-adhd-fourfold-higher.html" }
     },
     {
-      question: "No estudo ABCD sobre cannabis na adolescência, qual domínio cognitivo mostrou o maior efeito negativo aos 15–17 anos?",
-      options: ["Velocidade de processamento", "Memória de trabalho", "Processamento visuoespacial", "Linguagem"],
+      question: "No estudo da Nature Mental Health com 23.517 participantes, o que a atividade física modificou em quem tem maior risco genético para depressão?",
+      options: [
+        "A chance de receber o diagnóstico",
+        "A gravidade dos sintomas depressivos",
+        "A idade de início da depressão",
+        "A resposta a antidepressivos"
+      ],
       correct: 1,
-      explanation: "Os jovens que começaram a usar cannabis tiveram trajetória cognitiva achatada e, aos 15–17 anos, iam pior em quase todos os domínios — com o maior efeito na memória de trabalho. Quem tinha apenas CBD no cabelo não diferiu do grupo controle.",
-      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/teen-cannabis-use-linked-to-flattened-cognitive-development-in-large-u-s-study/" }
+      explanation: "Mais atividade atenuou a ligação entre risco genético e intensidade dos sintomas, mas não mudou o efeito da genética sobre a chance de diagnóstico. Os dados vieram de genoma completo e cerca de 582 dias de Fitbit por pessoa.",
+      source: { label: "Fonte: Medical Xpress", url: "https://medicalxpress.com/news/2026-10-physical-weakens-link-genetic-depression.html" }
     },
     {
-      question: "No estudo da PLOS Medicine sobre \"idade cerebral\", quais condições NÃO mostraram diferença significativa no envelhecimento do cérebro?",
-      options: ["Alzheimer e comprometimento cognitivo leve", "Esquizofrenia e transtorno bipolar", "TDAH e autismo", "Depressão maior e dependência química"],
-      correct: 2,
-      explanation: "Alzheimer e comprometimento cognitivo leve tiveram as associações mais fortes com um cérebro \"mais velho\", seguidos por dependência, esquizofrenia, bipolaridade e depressão maior. TDAH e autismo não mostraram diferença significativa em relação aos 45.900 controles.",
-      source: { label: "Fonte: ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/09/260927225038.htm" }
+      question: "No estudo da Nature Neuroscience com pacientes ouvindo histórias, a atividade dos neurônios do hipocampo se alinhou melhor a qual modelo de linguagem?",
+      options: ["BERT", "GPT-2", "Word2Vec", "Nenhum modelo"],
+      correct: 1,
+      explanation: "O padrão da população de neurônios do hipocampo se alinhou melhor às representações do GPT-2. Os neurônios codificavam o significado das palavras mesmo descontando som e gramática, e suas respostas variavam conforme o contexto em palavras de múltiplos sentidos.",
+      source: { label: "Fonte: Medical Xpress", url: "https://medicalxpress.com/news/2026-10-llm-brain-cells-encode-words.html" }
     }
   ];
 
