@@ -37,7 +37,7 @@
   <div class="wrap">
     <p class="kicker">Quiz da semana</p>
     <h1 style="font-size:clamp(2.2rem, 4.6vw, 3.6rem); max-width:20ch;">Você acompanhou as <em>novidades</em> desta semana?</h1>
-    <p class="hero-sub">Cinco perguntas rápidas sobre o resumo semanal de 05 – 11 de outubro. Uma pergunta por vez, sem pressa.</p>
+    <p class="hero-sub">Cinco perguntas rápidas sobre o resumo semanal de 12 – 18 de outubro. Uma pergunta por vez, sem pressa.</p>
   </div>
 </header>
 
@@ -97,54 +97,44 @@
 <script>
   var quizData = [
     {
-      question: "Segundo o Monitor da Saúde 2026 (Ipsos), que parcela dos brasileiros aponta a saúde mental entre os maiores problemas de saúde do país?",
-      options: ["Cerca de 28%", "Cerca de 48%", "Cerca de 58%", "Cerca de 75%"],
+      question: "Que abordagem terapêutica o aplicativo Conemo, da USP, usa para tratar sintomas de depressão e ansiedade nas UBSs?",
+      options: ["Psicanálise", "Terapia cognitivo-comportamental", "Mindfulness puro", "Terapia de exposição"],
+      correct: 1,
+      explanation: "O Conemo (CONtrole EMOcional) oferece técnicas de terapia cognitivo-comportamental em jornadas com textos, áudios e vídeos. Testado com 610 pacientes em São Paulo e Lima (resultados na JAMA), hoje está em todas as 18 UBSs de Indaiatuba (SP).",
+      source: { label: "Fonte: Jornal da USP", url: "https://jornal.usp.br/ciencias/aplicativo-para-tratar-sintomas-de-depressao-e-ansiedade-e-implementado-com-sucesso-em-servicos-de-saude/" }
+    },
+    {
+      question: "No estudo da FMRP-USP com camundongos, em quanto tempo a combinação de CBD em dose baixa com escitalopram reverteu os efeitos do estresse crônico?",
+      options: ["1 dia", "7 dias", "21 dias", "6 semanas"],
+      correct: 1,
+      explanation: "A combinação agiu em 7 dias, contra 2 a 3 semanas do escitalopram sozinho. O CBD a 7,5 mg/kg, isolado, não teve efeito. O mecanismo envolve a enzima NAPE-PLD no córtex pré-frontal — e, por ser pesquisa em animais, ainda precisa de estudos clínicos.",
+      source: { label: "Fonte: Jornal da USP", url: "https://jornal.usp.br/ciencias/canabidiol-acelera-efeitos-do-escitalopram-em-camundongos-submetidos-a-estresse-cronico/" }
+    },
+    {
+      question: "Quantos territórios químicos distintos (\"lipizonas\") o atlas de lipídios da EPFL identificou no cérebro de camundongos?",
+      options: ["53", "172", "539", "7 milhões"],
       correct: 2,
-      explanation: "58% dos brasileiros citaram a saúde mental, seis pontos a mais que em 2025 e acima da média global de 48% (o Chile lidera com 75%). A diferença de gênero é grande: 68% das mulheres contra 47% dos homens. A pesquisa mede percepção, não diagnósticos.",
-      source: { label: "Fonte: Jornal Pequeno", url: "https://jornalpequeno.com.br/2026/10/10/saude-mental-preocupa-58-dos-brasileiros-aponta-pesquisa/" }
+      explanation: "Foram 539 lipizonas, a partir de cerca de 7 milhões de medições de 172 lipídios em 109 fatias de cérebro. A substância branca se mostrou muito mais diversa do que se pensava. O estudo saiu na Nature.",
+      source: { label: "Fonte: ScienceDaily", url: "https://www.sciencedaily.com/releases/2026/10/261012185011.htm" }
     },
     {
-      question: "Na pesquisa da Robert Half sobre burnout, qual foi o fator mais citado pelos trabalhadores brasileiros?",
+      question: "No estudo sobre ferro cerebral em crianças com TDAH, qual fator esteve associado a níveis mais altos de ferro em regiões como tálamo e núcleos da base?",
       options: [
-        "Tempo de deslocamento",
-        "Sobrecarga por equipes enxutas",
-        "Sensação de carreira estagnada",
-        "Queda de motivação após reestruturações"
+        "Tempo total de uso da medicação",
+        "Começar o estimulante até os 8 anos",
+        "Dose mais alta do estimulante",
+        "Ter também diagnóstico de autismo"
       ],
       correct: 1,
-      explanation: "A sobrecarga causada por equipes reduzidas foi citada por 52%, seguida por carreira estagnada (43%), deslocamento (37%) e desmotivação após reestruturações (35%). No geral, 59% dos brasileiros deram nota de 6 a 10 para o próprio esgotamento.",
-      source: { label: "Fonte: Seu Dinheiro", url: "https://www.seudinheiro.com/2026/carreiras/saude-mental-no-trabalho-pesquisa-da-robert-half-mostra-os-4-fatores-que-mais-geram-burnout-no-pais-giov/" }
+      explanation: "Crianças que começaram os estimulantes até os 8 anos tinham mais ferro no tálamo, caudado, putâmen e globo pálido do que as que começaram aos 9 ou depois; o tempo de uso quase não pesou. A amostra é pequena (29 crianças com TDAH e 38 neurotípicas) e o estudo é observacional.",
+      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/brain-iron-levels-in-children-with-adhd-may-depend-on-when-they-start-medication/" }
     },
     {
-      question: "No estudo da JAMA Psychiatry sobre TDAH e cognição na velhice, o que aconteceu com a associação quando os diagnósticos precisavam estar separados por oito anos ou mais?",
-      options: [
-        "Ficou ainda mais forte",
-        "Caiu bastante",
-        "Permaneceu igual",
-        "Inverteu, virando um efeito protetor"
-      ],
+      question: "Qual a correlação estimada hoje entre capacidade cognitiva geral e desempenho no trabalho, segundo a síntese da Universidade de Minnesota?",
+      options: ["Cerca de 0,05", "Cerca de 0,20", "Cerca de 0,51", "Cerca de 0,80"],
       correct: 1,
-      explanation: "O risco ajustado, de mais de quatro vezes, caiu bastante com intervalos maiores entre os diagnósticos — sinal de que parte da associação pode refletir sintomas cognitivos iniciais confundidos com TDAH. Ainda assim, 6,7% das pessoas com TDAH desenvolveram comprometimento cognitivo, contra 3,4% sem o diagnóstico.",
-      source: { label: "Fonte: Medical Xpress", url: "https://medicalxpress.com/news/2026-10-health-link-adhd-fourfold-higher.html" }
-    },
-    {
-      question: "No estudo da Nature Mental Health com 23.517 participantes, o que a atividade física modificou em quem tem maior risco genético para depressão?",
-      options: [
-        "A chance de receber o diagnóstico",
-        "A gravidade dos sintomas depressivos",
-        "A idade de início da depressão",
-        "A resposta a antidepressivos"
-      ],
-      correct: 1,
-      explanation: "Mais atividade atenuou a ligação entre risco genético e intensidade dos sintomas, mas não mudou o efeito da genética sobre a chance de diagnóstico. Os dados vieram de genoma completo e cerca de 582 dias de Fitbit por pessoa.",
-      source: { label: "Fonte: Medical Xpress", url: "https://medicalxpress.com/news/2026-10-physical-weakens-link-genetic-depression.html" }
-    },
-    {
-      question: "No estudo da Nature Neuroscience com pacientes ouvindo histórias, a atividade dos neurônios do hipocampo se alinhou melhor a qual modelo de linguagem?",
-      options: ["BERT", "GPT-2", "Word2Vec", "Nenhum modelo"],
-      correct: 1,
-      explanation: "O padrão da população de neurônios do hipocampo se alinhou melhor às representações do GPT-2. Os neurônios codificavam o significado das palavras mesmo descontando som e gramática, e suas respostas variavam conforme o contexto em palavras de múltiplos sentidos.",
-      source: { label: "Fonte: Medical Xpress", url: "https://medicalxpress.com/news/2026-10-llm-brain-cells-encode-words.html" }
+      explanation: "Com 212 amostras e 109.396 trabalhadores (1990–2022), a estimativa recomendada ficou em 0,20 — bem abaixo do clássico 0,51 dos manuais. A validade foi maior em funções técnicas e manuais, e os dados dependem muito de avaliações de chefes.",
+      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/intelligence-tests-are-a-weaker-predictor-of-job-performance-than-long-believed-large-study-finds/" }
     }
   ];
 
