@@ -37,7 +37,7 @@
   <div class="wrap">
     <p class="kicker">Quiz da semana</p>
     <h1 style="font-size:clamp(2.2rem, 4.6vw, 3.6rem); max-width:20ch;">Você acompanhou as <em>novidades</em> desta semana?</h1>
-    <p class="hero-sub">Cinco perguntas rápidas sobre o resumo semanal de 26 de outubro – 1 de novembro. Uma pergunta por vez, sem pressa.</p>
+    <p class="hero-sub">Cinco perguntas rápidas sobre o resumo semanal de 2 – 8 de novembro. Uma pergunta por vez, sem pressa.</p>
   </div>
 </header>
 
@@ -97,54 +97,49 @@
 <script>
   var quizData = [
     {
-      question: "Na pesquisa da FGV e do IPq-USP com 2.241 trabalhadores da indústria, que proporção apresentou sintomas de estresse, ansiedade e/ou depressão?",
-      options: ["Cerca de 5%", "Cerca de 30%", "Cerca de 60%", "Quase todos"],
+      question: "No Panorama da Saúde Mental 2026, do Instituto Cactus com a AtlasIntel, qual fator apareceu como o mais ligado a pior saúde mental dos brasileiros?",
+      options: ["A solidão", "O uso de redes sociais", "O trabalho remoto", "A falta de sono"],
+      correct: 0,
+      explanation: "Cerca de 36,5% relataram solidão nas duas semanas anteriores; quem se sentia só com mais frequência marcou 383 pontos no iCASM, contra 782 entre quem não relatou solidão. O estudo, com 4.601 pessoas, é transversal e de autorrelato, e não mostra se a solidão causa o sofrimento ou é consequência dele.",
+      source: { label: "Fonte: Portal Afya", url: "https://portal.afya.com.br/psiquiatria/saude-mental-no-brasil-revela-diferencas-importantes-entre-faixas-etarias" }
+    },
+    {
+      question: "O estudo do CISM (IPq-HC-FMUSP) para depressão pós-parto testa a combinação de quê?",
+      options: [
+        "Antidepressivo com exercício físico",
+        "Uma única sessão de psicoterapia com um aplicativo de celular",
+        "Estimulação magnética transcraniana com terapia de grupo",
+        "Visitas domiciliares semanais com suplementação"
+      ],
       correct: 1,
-      explanation: "Cerca de 30% tinham sintomas: 20% leves ou moderados e 10% graves ou extremamente graves. Mulheres, trabalhadores mais jovens e pessoas com doenças crônicas foram mais vulneráveis. O questionário foi aplicado em 2021, é transversal e não faz diagnóstico clínico. Publicado na Revista Brasileira de Saúde Ocupacional.",
-      source: { label: "Fonte: Jornal da USP", url: "https://jornal.usp.br/ciencias/um-terco-dos-trabalhadores-da-industria-teve-sintomas-de-estresse-ansiedade-ou-depressao-pos-pandemia/" }
+      explanation: "O estudo combina psicoterapia de sessão única com o aplicativo Motherly (áudios, leituras e ferramentas de bem-estar). É gratuito, online e dura oito semanas, para mulheres de 18 a 40 anos com até 12 meses de pós-parto. A depressão pós-parto afeta cerca de 17% das mulheres.",
+      source: { label: "Fonte: Agência FAPESP", url: "https://agencia.fapesp.br/index.php/estudo-busca-voluntarias-com-depressao-pos-parto-para-testar-nova-abordagem-terapeutica/59582" }
     },
     {
-      question: "A publicação \"Cuidado, Território e Direitos\", do Ministério da Saúde, orienta equipes sobre o cuidado de qual público?",
+      question: "No estudo da Universidade de Helsinque com magnetoencefalografia, o que caracterizou a atividade cerebral de adultos com TDAH?",
       options: [
-        "Crianças com atraso no desenvolvimento",
-        "Idosos com demência em instituições de longa permanência",
-        "Pessoas com transtorno mental em conflito com a lei",
-        "Trabalhadores afastados por burnout"
+        "Atividade elétrica muito mais fraca em todas as regiões",
+        "Ausência de ritmos alfa",
+        "Correlações temporais de longo alcance mais fortes, sinal de atividade sincronizada demais",
+        "Um padrão único que separava perfeitamente quem tinha TDAH"
       ],
       correct: 2,
-      explanation: "O material orienta as equipes (EAP-Desinst) que ligam Justiça, SUS e SUAS a fortalecer a desinstitucionalização e o cuidado em liberdade, com Projetos Terapêuticos Singulares e articulação com a Raps. Alinha-se à Reforma Psiquiátrica e à Resolução CNJ nº 487/2023.",
-      source: { label: "Fonte: Ministério da Saúde", url: "https://www.gov.br/saude/pt-br/assuntos/noticias/2026/outubro/ministerio-da-saude-lanca-orientacoes-para-fortalecer-o-cuidado-em-liberdade-de-pessoas-com-transtorno-mental-em-conflito-com-a-lei" }
+      explanation: "O grupo com TDAH mostrou correlações temporais de longo alcance mais fortes nos ritmos alfa e gama, e mais correlação gama acompanhou sintomas mais intensos. Nenhum padrão separou de forma limpa quem tinha ou não o transtorno. O estudo, na Translational Psychiatry, é correlacional e teve 70 participantes.",
+      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/adhd-symptoms-may-reflect-a-brain-shifting-toward-overly-synchronized-activity-study-suggests/" }
     },
     {
-      question: "No estudo de Stanford sobre terapia hormonal e Alzheimer, que tipo de terapia foi associado a menos sinais da doença no tecido cerebral?",
-      options: [
-        "Terapia só com estrogênio",
-        "Terapia combinada de estrogênio com progestogênio",
-        "Testosterona",
-        "Melatonina"
-      ],
-      correct: 0,
-      explanation: "A análise de 2.959 autópsias de mulheres mostrou menor chance de patologia avançada entre as 258 usuárias de estrogênio isolado, sobretudo em quem não tinha a variante APOE e4. O estudo, na Neurology, é observacional e as usuárias começaram o tratamento por volta dos 70 anos; não prova causa.",
-      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/estrogen-therapy-linked-to-fewer-signs-of-alzheimer-s-disease-in-brain-tissue/" }
+      question: "No estudo australiano que acompanhou crianças por cerca de 32 anos, qual medida de condicionamento na infância se associou a menos depressão na vida adulta?",
+      options: ["Salto em distância", "Velocidade de corrida", "Número de flexões", "Flexibilidade"],
+      correct: 1,
+      explanation: "Cada desvio-padrão a mais na velocidade da corrida de 1,6 km se associou a uma taxa 15% menor de depressão, ajustando por idade e sexo; a associação perdeu significância após ajustes adicionais, e força muscular não teve relação consistente. O estudo, no Journal of Affective Disorders, é observacional.",
+      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/fitter-kids-face-a-lower-risk-of-depression-decades-later-study-suggests/" }
     },
     {
-      question: "No ensaio da UCLA com endotoxina, o que a inflamação aguda reduziu duas horas depois da injeção?",
-      options: [
-        "A memória verbal",
-        "A atenção a rostos emocionais",
-        "O prazer e a vontade de conversar com outra pessoa",
-        "A vontade de fazer quebra-cabeças"
-      ],
-      correct: 2,
-      explanation: "O grupo da endotoxina (18 mulheres) relatou mais anedonia e menos desejo de conversar do que o grupo placebo (22), sem mudança significativa no desejo por outras atividades. Em quatro horas a anedonia voltou ao basal. A inflamação aguda induzida difere da inflamação crônica de baixo grau da depressão. Publicado na Psychoneuroendocrinology.",
-      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/inflammation-briefly-dampens-pleasure-and-the-desire-to-socialize-placebo-controlled-study-finds/" }
-    },
-    {
-      question: "No estudo japonês com 113 pré-escolares, o que se associou a melhor flexibilidade cognitiva (trocar de regra)?",
-      options: ["Mais piscadas espontâneas", "Menos horas de sono", "Maior altura", "Falar mais de um idioma"],
-      correct: 0,
-      explanation: "Crianças que piscavam mais acertaram mais a troca de regras (r = 0,35), e a ativação do córtex pré-frontal dorsolateral direito foi a única região ligada às duas medidas. O estudo, na Communications Psychology, é transversal; a taxa de piscadas não serve para avaliar ou diagnosticar crianças individualmente.",
-      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/scientists-find-a-surprising-clue-to-how-well-preschoolers-can-switch-mental-gears/" }
+      question: "No estudo do Wellcome Sanger Institute com crianças britânicas, o que aconteceu com a associação entre escores poligênicos e QI dos 4 aos 16 anos?",
+      options: ["Desapareceu", "Ficou exatamente igual", "Ficou mais fraca", "Ficou mais forte"],
+      correct: 3,
+      explanation: "Os escores poligênicos explicaram cerca de 11% da variação do QI aos 4 anos e 14% aos 16, enquanto o efeito de mutações raras que inativam genes enfraqueceu com a idade. Publicado na Nature Human Behaviour; muitos escores aos 4 anos foram imputados e a amostra era só de ascendência europeia.",
+      source: { label: "Fonte: PsyPost", url: "https://www.psypost.org/the-link-between-genes-and-kids-iq-shifts-as-they-grow-up-large-study-finds/" }
     }
   ];
 
