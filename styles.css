@@ -11,7 +11,8 @@
   --paper:#FFFDF8;
   --ink:#035063;
   --ink-soft:#4C7480;
-  --ink-faint:#9AB0B5;
+  --ink-faint:#9AB0B5;   /* borders/decoration only — 2.2:1, too light for text */
+  --ink-muted:#5A7882;   /* quietest text color — 4.5:1 on warm-white (WCAG AA) */
   --line:#E4DDCF;
 
   /* accent palette — one is chosen per page via [data-accent] */
@@ -206,7 +207,7 @@ a{ color:inherit; }
   padding-bottom:3px;
 }
 .triptych-link.is-quiet{
-  color:var(--ink-faint); border-bottom-color:var(--line);
+  color:var(--ink-muted); border-bottom-color:var(--line);
   cursor:default;
 }
 
@@ -239,7 +240,7 @@ a{ color:inherit; }
   font-family:var(--font-body);
   font-size:12px; letter-spacing:0.06em; text-transform:uppercase;
   background:none; border:none; border-bottom:2px solid transparent;
-  color:var(--ink-faint); cursor:pointer; padding:0 2px 16px; white-space:nowrap;
+  color:var(--ink-muted); cursor:pointer; padding:0 2px 16px; white-space:nowrap;
   transition:color .3s ease;
 }
 .week-tab-btn:hover{ color:var(--ink); }
@@ -277,7 +278,7 @@ a{ color:inherit; }
 .entry.is-hidden{ display:none; }
 .entry-kicker{
   font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
-  color:var(--ink-faint); margin:0 0 10px;
+  color:var(--ink-muted); margin:0 0 10px;
 }
 .entry h3{
   font-family:var(--font-display); font-weight:480; font-size:21px;
@@ -333,7 +334,7 @@ a{ color:inherit; }
 .quiz-meta{
   display:flex; justify-content:space-between; align-items:baseline;
   font-size:11px; letter-spacing:0.1em; text-transform:uppercase;
-  color:var(--ink-faint); margin-bottom:40px;
+  color:var(--ink-muted); margin-bottom:40px;
 }
 
 .quiz-question{
@@ -361,7 +362,7 @@ a{ color:inherit; }
 }
 .quiz-option.is-correct .qi-icon{ opacity:1; }
 .quiz-option.is-wrong{
-  color:var(--ink-faint); border-color:var(--line);
+  color:var(--ink-muted); border-color:var(--line);
 }
 .quiz-option.is-wrong .qi-icon{ opacity:1; }
 .quiz-option.is-muted{ opacity:0.45; }
@@ -415,7 +416,7 @@ a{ color:inherit; }
   display:flex; justify-content:space-between; gap:12px; align-items:baseline;
 }
 .quiz-reading a:hover{ color:var(--ink-soft); }
-.quiz-reading a .qr-source{ font-size:11px; color:var(--ink-faint); white-space:nowrap; }
+.quiz-reading a .qr-source{ font-size:11px; color:var(--ink-muted); white-space:nowrap; }
 
 .quiz-actions{ display:flex; gap:16px; flex-wrap:wrap; }
 .quiz-actions button, .quiz-actions a{
@@ -451,7 +452,7 @@ a{ color:inherit; }
   background:var(--paper); border:1px solid var(--line); border-radius:2px;
   padding:14px 16px;
 }
-.newsletter-form input[type="email"]::placeholder{ color:var(--ink-faint); }
+.newsletter-form input[type="email"]::placeholder{ color:var(--ink-muted); }
 .newsletter-form input[type="email"]:focus{ outline:none; border-color:var(--ink-faint); }
 .newsletter-form button{
   font-family:var(--font-body); font-size:12px; letter-spacing:0.08em; text-transform:uppercase;
@@ -459,8 +460,8 @@ a{ color:inherit; }
   padding:14px 26px; cursor:pointer; white-space:nowrap;
 }
 .newsletter-form button:hover{ opacity:0.88; }
-.newsletter-note{ margin:16px 0 0; font-size:11px; color:var(--ink-faint); }
-.newsletter-note a{ color:var(--ink-faint); text-decoration:underline; }
+.newsletter-note{ margin:16px 0 0; font-size:11px; color:var(--ink-muted); }
+.newsletter-note a{ color:var(--ink-muted); text-decoration:underline; }
 @media (max-width:560px){
   .newsletter-form{ flex-direction:column; }
   .newsletter-form button{ width:100%; }
@@ -480,7 +481,7 @@ a{ color:inherit; }
 .newsletter-toast-close{
   position:absolute; top:8px; right:10px;
   background:none; border:none; cursor:pointer;
-  font-size:18px; line-height:1; color:var(--ink-faint); padding:4px;
+  font-size:18px; line-height:1; color:var(--ink-muted); padding:4px;
 }
 .newsletter-toast-close:hover{ color:var(--ink); }
 .newsletter-toast-kicker{
@@ -501,7 +502,7 @@ a{ color:inherit; }
   background:var(--paper); border:1px solid var(--line); border-radius:2px;
   padding:10px 12px;
 }
-.newsletter-toast-form input[type="email"]::placeholder{ color:var(--ink-faint); }
+.newsletter-toast-form input[type="email"]::placeholder{ color:var(--ink-muted); }
 .newsletter-toast-form input[type="email"]:focus{ outline:none; border-color:var(--ink-faint); }
 .newsletter-toast-form button{
   font-family:var(--font-body); font-size:11px; letter-spacing:0.08em; text-transform:uppercase;
@@ -558,4 +559,79 @@ a{ color:inherit; }
   .hero h1.profile-name{ font-size:clamp(1.05rem, 5.5vw, 2.4rem); }
   .section-head{ flex-direction:column; align-items:flex-start; }
   .section-head .section-note{ text-align:left; }
+}
+
+/* ---------- Care note (footer, all pages) ---------- */
+
+.care-note{
+  border-bottom:1px solid var(--line);
+  padding:0 0 32px; margin:0 0 40px;
+  max-width:62ch;
+}
+.care-note-label{
+  font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--ink-soft); margin:0 0 10px;
+}
+.care-note-label .dot{
+  display:inline-block; width:6px; height:6px; border-radius:50%;
+  background:var(--accent); margin-right:8px; vertical-align:1px;
+}
+.care-note p{
+  font-size:13.5px; color:var(--ink-soft); line-height:1.7; font-weight:300; margin:0;
+}
+.care-note a{ color:var(--ink); text-decoration:none; border-bottom:1px solid var(--accent); }
+
+/* ---------- Topics (auto-detected), permalinks ---------- */
+
+.topics{
+  display:flex; flex-wrap:wrap; align-items:center; gap:8px 14px; margin:18px 0 0;
+}
+.topics-label{
+  font-size:11px; letter-spacing:0.14em; text-transform:uppercase; color:var(--ink-soft); margin-right:4px;
+}
+.topic-btn{
+  font-family:var(--font-body); font-size:13px; font-weight:400;
+  background:none; border:none; border-bottom:1px solid var(--line);
+  color:var(--ink-soft); cursor:pointer; padding:4px 0;
+  transition:color .25s ease, border-color .25s ease;
+}
+.topic-btn:hover{ color:var(--ink); border-bottom-color:var(--ink-faint); }
+.topic-btn.active{ color:var(--ink); border-bottom-color:var(--accent); }
+.topic-count{ font-size:11px; color:var(--ink-muted); }
+.filter-status{
+  font-family:var(--font-display); font-style:italic; font-size:15px;
+  color:var(--ink-soft); margin:20px 0 0; min-height:1px;
+}
+.filter-status:empty{ margin:0; }
+.week.week-empty{ display:none; }
+
+.entry-actions{ display:flex; align-items:baseline; gap:20px; flex-wrap:wrap; }
+.entry-copy{
+  font-family:var(--font-body); font-size:12px; color:var(--ink-muted);
+  background:none; border:none; padding:0 0 2px; cursor:pointer;
+  border-bottom:1px solid transparent;
+}
+.entry-copy:hover{ color:var(--ink); border-bottom-color:var(--line); }
+.entry{ scroll-margin-top:120px; }
+.entry.is-target{ box-shadow:inset 2px 0 0 var(--accent); padding-left:18px; }
+
+/* ---------- Weekly note (optional, written by Rafaela) ---------- */
+
+.week-note{
+  margin:20px 0 8px; padding:22px 0 4px;
+  border-top:1px solid var(--line);
+  max-width:60ch;
+}
+.week-note p.week-note-label{
+  font-family:var(--font-body); font-style:normal; font-weight:400; line-height:1.6;
+  font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--ink-soft); margin:0 0 12px;
+}
+.week-note-label .dot{
+  display:inline-block; width:6px; height:6px; border-radius:50%;
+  background:var(--accent); margin-right:8px; vertical-align:1px;
+}
+.week-note p{
+  font-family:var(--font-display); font-style:italic; font-weight:340;
+  font-size:17px; line-height:1.6; color:var(--ink); margin:0 0 12px;
 }
